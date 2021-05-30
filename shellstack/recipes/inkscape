@@ -1,6 +1,6 @@
 #!/bin/bash
 source "$ROOT_PATH/recipes/basic"
-source "$LIB_PATH/python3_9.sh"
+source "$LIB_PATH/inkscape.sh"
 function defaults_basic {
 	#TODO: verify if vars are set and then use defautls our get 'em another way
 	HOST_NAME="myhost"
@@ -9,7 +9,7 @@ function defaults_basic {
 	USER_SSH_KEY="ssh-rsa paste here your ~/.ssh/id_rsa.pub"
 }
 
-function install_python3_9 {
+function install_inkscape {
 	# install_basic
-   easy_install_python3_9
+   easy_install_inkscape
 }
