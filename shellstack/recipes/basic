@@ -3,7 +3,6 @@ source "$LIB_PATH/utils.sh"
 source "$LIB_PATH/hostname.sh"
 source "$LIB_PATH/user.sh"
 source "$LIB_PATH/security.sh"
-source "$ROOT_PATH/recipes/basic"
 
 function defaults_basic {
 	#TODO: verify if vars are set and then use defautls our get 'em another way

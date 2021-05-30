@@ -46,11 +46,82 @@ def create_lib_file(package_name: str, install_command: str):
 
 def create_recipe(recipe_name):
     with open(RECIPES_RELATIVE_PATH + "/" + recipe_name, 'w') as f:
-        f.write(RECIPES_TEMPLATE % (recipe_name,recipe_name, recipe_name))
+        f.write(RECIPES_TEMPLATE % (recipe_name, recipe_name, recipe_name))
 
 
 def install_basic(package_name: str, install_command: str):
     create_lib_file(package_name, install_command)
     create_recipe(package_name)
 
-install_basic("python3_9", "sudo apt install python3.9 -y")
+
+def generate_all():
+    "https://linuxhint.com/100_best_ubuntu_apps/"
+
+    # python
+    install_basic("python3_9", "sudo apt install python3.9 -y")
+
+    # steam
+    install_basic("steam",
+                  "sudo add-apt-repository multiverse\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install steam")
+
+    # vlc media
+    install_basic("vlc_media",
+                  "sudo add-apt-repository ppa:videolan/master-daily\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install vlc qtwayland5")
+
+    # vlc media
+    install_basic("atom_text_editor",
+                  "sudo add-apt-repository ppa:webupd8team/atom\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install atom")
+
+    # gimp
+    install_basic("gimp", "sudo apt-get install gimp")
+
+    # synaptic
+    install_basic("synaptic", "sudo apt-get install synaptic")
+
+    # Skype
+    install_basic("skype",
+                  "sudo snap install skype")
+
+    # unity-tweak-tool
+    install_basic("unity-tweak-tool",
+                  "sudo apt-get install unity-tweak-tool")
+
+    # ubuntu-cleaner
+    install_basic("ubuntu-cleaner",
+                  "sudo add-apt-repository ppa:gerardpuig/ppa\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install ubuntu-cleaner")
+
+    # corebird
+    install_basic("corebird", " sudo snap install corebird")
+
+    # clementine
+    install_basic("clementine",
+                  "sudo add-apt-repository ppa:me-davidsansome/clementine\n"+
+                  "sudo apt-get update\n"+
+                  "sudo apt-get install clementine"
+                  )
+
+    # audacity
+    install_basic("audacity",
+                  "sudo add-apt-repository ppa:ubuntuhandbook1/audacity\n"+
+                  "sudo apt-get update\n"+
+                  "sudo apt-get install audacity"
+                  )
+
+    # vim
+    install_basic("vim", "sudo apt-get install vim")
+
+    # inkscape
+    install_basic("inkscape",
+                  "sudo add-apt-repository ppa:inkscape.dev/stable\n"+
+                  "sudo apt-get update\n"+
+                  "sudo apt-get install inkscape"
+                  )
+
