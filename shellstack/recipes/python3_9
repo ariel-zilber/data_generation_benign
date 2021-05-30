@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source "$ROOT_PATH/recipes/basic"
 source "$LIB_PATH/python3_9.sh"
 function defaults_basic {
 	#TODO: verify if vars are set and then use defautls our get 'em another way
@@ -11,5 +11,5 @@ function defaults_basic {
 
 function install_python3_9 {
 	install_basic
-    easy_install_python3_9
+   easy_install_python3_9
 }
