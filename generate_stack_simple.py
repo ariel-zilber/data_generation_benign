@@ -24,7 +24,7 @@ function defaults_basic {
 }
 
 function install_%s {
-	install_basic
+	# install_basic
    easy_install_%s
 }"""
 
