@@ -49,5 +49,8 @@ def create_recipe(recipe_name):
         f.write(RECIPES_TEMPLATE % (recipe_name,recipe_name, recipe_name))
 
 
-create_lib_file("python3_9", "sudo apt install python3.9 -y")
-create_recipe("python3_9")
+def install_basic(package_name: str, install_command: str):
+    create_lib_file(package_name, install_command)
+    create_recipe(package_name)
+
+install_basic("python3_9", "sudo apt install python3.9 -y")
