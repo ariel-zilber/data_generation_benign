@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$ROOT_PATH/recipes/basic"
 
 source "$LIB_PATH/android.sh"
 function defaults_basic {

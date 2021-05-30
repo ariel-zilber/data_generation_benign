@@ -13,7 +13,7 @@ LIB_TEMPLATE = """function easy_install_%s {
 LIB_RELATIVE_PATH = "shellstack/lib/"
 
 RECIPES_TEMPLATE = """#!/bin/bash
-
+source "$ROOT_PATH/recipes/basic"
 source "$LIB_PATH/%s.sh"
 function defaults_basic {
 	#TODO: verify if vars are set and then use defautls our get 'em another way
@@ -49,5 +49,5 @@ def create_recipe(recipe_name):
         f.write(RECIPES_TEMPLATE % (recipe_name,recipe_name, recipe_name))
 
 
-create_lib_file("python3_9", "sudo apt install python3.9")
+create_lib_file("python3_9", "sudo apt install python3.9 -y")
 create_recipe("python3_9")

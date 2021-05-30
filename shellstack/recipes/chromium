@@ -1,6 +1,8 @@
 #!/bin/bash
 
 source "$LIB_PATH/chromium.sh"
+source "$ROOT_PATH/recipes/basic"
+
 function defaults_basic {
 	#TODO: verify if vars are set and then use defautls our get 'em another way
 	HOST_NAME="myhost"
