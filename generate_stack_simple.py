@@ -62,19 +62,19 @@ def generate_all():
 
     # steam
     install_basic("steam",
-                  "sudo add-apt-repository multiverse\n" +
+                  "sudo add-apt-repository multiverse -y \n" +
                   "sudo apt-get update\n" +
                   "sudo apt-get install  -y steam")
 
     # vlc media
     install_basic("vlc_media",
-                  "sudo add-apt-repository ppa:videolan/master-daily\n" +
+                  "sudo add-apt-repository ppa:videolan/master-daily -y \n" +
                   "sudo apt-get update\n" +
                   "sudo apt-get install  -y vlc qtwayland5")
 
     # vlc media
     install_basic("atom_text_editor",
-                  "sudo add-apt-repository ppa:webupd8team/atom\n" +
+                  "sudo add-apt-repository ppa:webupd8team/atom -y \n" +
                   "sudo apt-get update\n" +
                   "sudo apt-get install  -y atom")
 
@@ -94,7 +94,7 @@ def generate_all():
 
     # ubuntu-cleaner
     install_basic("ubuntu-cleaner",
-                  "sudo add-apt-repository ppa:gerardpuig/ppa\n" +
+                  "sudo add-apt-repository ppa:gerardpuig/ppa -y \n" +
                   "sudo apt-get update\n" +
                   "sudo apt-get install  -y ubuntu-cleaner")
 
@@ -103,14 +103,14 @@ def generate_all():
 
     # clementine
     install_basic("clementine",
-                  "sudo add-apt-repository ppa:me-davidsansome/clementine\n"+
+                  "sudo add-apt-repository ppa:me-davidsansome/clementine -y \n"+
                   "sudo apt-get update\n"+
                   "sudo apt-get install  -y clementine"
                   )
 
     # audacity
     install_basic("audacity",
-                  "sudo add-apt-repository ppa:ubuntuhandbook1/audacity\n"+
+                  "sudo add-apt-repository ppa:ubuntuhandbook1/audacity -y \n"+
                   "sudo apt-get update\n"+
                   "sudo apt-get install -y  audacity"
                   )
@@ -120,7 +120,7 @@ def generate_all():
 
     # inkscape
     install_basic("inkscape",
-                  "sudo add-apt-repository ppa:inkscape.dev/stable\n"+
+                  "sudo add-apt-repository ppa:inkscape.dev/stable -y \n"+
                   "sudo apt-get update\n"+
                   "sudo apt-get install -y inkscape"
                   )
