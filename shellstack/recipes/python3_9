@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source "$LIB_PATH/python3_9.sh"
+function defaults_basic {
+	#TODO: verify if vars are set and then use defautls our get 'em another way
+	HOST_NAME="myhost"
+	USER_NAME="myuser"
+	USER_PASSWORD="mys3cr3t"
+	USER_SSH_KEY="ssh-rsa paste here your ~/.ssh/id_rsa.pub"
+}
+
+function install_python3_9 {
+	install_basic
+    easy_install_python3_9
+}
