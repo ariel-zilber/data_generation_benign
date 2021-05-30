@@ -125,3 +125,4 @@ def generate_all():
                   "sudo apt-get install inkscape"
                   )
 
+generate_all()
