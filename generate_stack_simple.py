@@ -103,15 +103,15 @@ def generate_all():
 
     # clementine
     install_basic("clementine",
-                  "sudo add-apt-repository ppa:me-davidsansome/clementine -y \n"+
-                  "sudo apt-get update\n"+
+                  "sudo add-apt-repository ppa:me-davidsansome/clementine -y \n" +
+                  "sudo apt-get update\n" +
                   "sudo apt-get install  -y clementine"
                   )
 
     # audacity
     install_basic("audacity",
-                  "sudo add-apt-repository ppa:ubuntuhandbook1/audacity -y \n"+
-                  "sudo apt-get update\n"+
+                  "sudo add-apt-repository ppa:ubuntuhandbook1/audacity -y \n" +
+                  "sudo apt-get update\n" +
                   "sudo apt-get install -y  audacity"
                   )
 
@@ -120,9 +120,279 @@ def generate_all():
 
     # inkscape
     install_basic("inkscape",
-                  "sudo add-apt-repository ppa:inkscape.dev/stable -y \n"+
-                  "sudo apt-get update\n"+
+                  "sudo add-apt-repository ppa:inkscape.dev/stable -y \n" +
+                  "sudo apt-get update\n" +
                   "sudo apt-get install -y inkscape"
                   )
+
+    install_basic("vim", " sudo apt-get install vim")
+    install_basic("inkscape", "sudo add-apt-repository ppa:inkscape.dev/stable\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install inkscape")
+
+    install_basic("shotcut", "snap install shotcut -- classic")
+
+    install_basic("simplescreenrecorder", " sudo add-apt-repository ppa:marten-baert/simplescreenrecorder\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install simplescreenrecorder")
+
+    install_basic("telegram-desktop", "sudo snap install telegram-desktop")
+
+    install_basic("caffeine", "sudo add-apt-repository ppa:eugenesan/ppa\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install caffeine -y")
+
+    install_basic("neofetch", "sudo add-apt-repository ppa:dawidd0811/neofetch\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get update install neofetch")
+
+    install_basic("liferea", "sudo add-apt-repository ppa:ubuntuhandbook1/apps\n" +
+                  "sudo apt-get update\n" +
+                  " sudo apt-get install liferea")
+
+    install_basic("pidgin", "sudo apt-get install pidgin")
+
+    install_basic("nautilus-dropbox", " sudo apt-get install nautilus-dropbox")
+
+    install_basic("terminator", "sudo apt-get install terminator")
+
+    install_basic("thonny", "sudo apt-get install thonny")
+
+    install_basic("font-manager",
+                  "sudo add-apt-repository ppa:font-manager/staging\n" +
+                  "sudo apt-get update" +
+                  "sudo apt-get install font-manager")
+
+    install_basic("atril", " sudo apt-get install atril")
+
+    install_basic("notepadqq",
+                  "sudo add-apt-repository ppa:notpadqq-team/notepadqq\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install notepadqq")
+
+    install_basic("bitcoin-qt", "sudo add-apt-repository ppa:bitcoin/bitcoin\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install bitcoin-qt")
+
+    install_basic("guake", "sudo apt-get install guake")
+
+    install_basic("kdeconnect", "sudo add-apt-repository ppa:webupd8team/indicator-kedeconnect\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install kdeconnect indicator-kdeconnect")
+
+    install_basic("copyq", "sudo add-apt-repository ppa:hluk/copyq\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install copyq")
+
+    install_basic("tilix", "sudo add-apt-repository ppa:webupd8team/terminix\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install tilix")
+
+    install_basic("anbox", "sudo add-apt-repository ppa:morphis/anbox-support\n" +
+                  "sudo apt-get update\n" +
+                  "udo apt install anbox-modules-dkms\n" +
+                  "snap install --devmode -- beta anbox")
+
+    install_basic("openshot", "sudo add-apt-repository ppa:openshot.developers/ppa\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install openshot -qt")
+    install_basic("plank", "sudo add-apt-repository ppa:ricotz/docky\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install plank")
+
+    install_basic("stacer", "sudo add-apt-repository ppa:oguzhaninan/stacer\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install stacer")
+
+    install_basic("hiri", "sudo snap install hiri")
+
+    install_basic("sublime-text", "sudo apt-get install sublime-text")
+
+    install_basic("kontact", "sudo add-apt-repository ppa: qr-tools-developers/qr-tools-stable\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install qtqr\n")
+
+    install_basic("kontact", "sudo apt-get install kontact\n")
+    install_basic("xmind", "sudo snap install xmind")
+
+    install_basic("nitroshare",
+                  "sudo apt-add-repository ppa:george-edison55/nitroshare\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install nitroshare"
+                  )
+
+    install_basic("konversation", "sudo apt-get install konversation\n")
+
+    install_basic("quiterss", "sudo apt-get install quiterss\n")
+
+    install_basic("mvp-test",
+                  "sudo add-apt-repository ppa:mc3man/mpv-tests\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install -y mpv")
+
+    # plume-creator
+    install_basic("plume-creator", "sudo apt-get install plume-creator\n")
+
+    # nomacs
+    install_basic("nomacs",
+                  "sudo add-apt-repository ppa:nomacs/stable\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install nomacs")
+
+    # Qmmp
+    install_basic("Qmmp", " sudo add-apt-repository ppa:forkotov02/ppa\n"
+                  + "sudo apt-get update\n" +
+                  "sudo apt-get install qmmp qmmp-q4 qmmp-plugin-pack-qt4")
+
+    # geary
+    install_basic("geary", "sudo apt install geary\n")
+
+    # geany
+    install_basic("geany", "sudo apt-get install geany\n")
+
+    # mumble-server
+    install_basic("mumble-server", "sudo apt-get install mumble-server\n")
+
+    # Deluge
+    install_basic("Deluge", "sudo add-apt-repository ppa:deluge-team/ppa\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install deluge")
+
+    install_basic("snapd", "sudo apt install snapd\n" +
+                  "sudo snap install code --classic")
+
+    install_basic("peek", "sudo add-apt-repository ppa:peek-developers/stable\n" +
+                  "sudo apt update\n" +
+                  "sudo apt install peek")
+
+    install_basic("indicator-weather",
+                  "sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather\n" +
+                  "sudo apt update\n" +
+                  "sudo apt install indicator-weather")
+
+    install_basic("MOC",
+                  "sudo apt-get install moc moc-ffmpeg-plugin")
+    install_basic("conky-manager", "sudo add-apt-repository ppa:teejee2008/ppa\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install conky-manager")
+
+    install_basic("gdebi", " sudo apt-get install gdebi")
+    install_basic("libreoffice",
+                  "sudo apt install snapd\n" +
+                  "sudo snap install libreoffice"
+                  )
+
+    install_basic("digikam",
+                  "sudo apt install snapd\n" +
+                  "sudo snap install digikam --beta")
+
+    install_basic("geary", "sudo add-apt-repository ppa:geary-team/releases\n" +
+                  "sudo apt install geary")
+
+    install_basic("tilix",
+                  "sudo apt-get update -y\n" +
+                  "sudo apt-get install -y tilix")
+
+    install_basic("tilix",
+                  "sudo apt-get update -y\n" +
+                  "sudo apt-get install -y tilix")
+
+    install_basic("neofetch",
+                  "sudo apt install snapd\n" +
+                  "sudo snap install neofetch --beta")
+
+    install_basic("flatpak",
+                  "sudo apt install flatpak\n" +
+                  "flatpak install flathub de.haeckerfelix.Shortwave")
+
+    install_basic("rambox",
+                  " sudo apt install snapd\n" +
+                  "sudo snap install rambox")
+
+    install_basic("blender",
+                  "sudo apt install snapd\n" +
+                  "sudo snap install blender --classic")
+
+    install_basic("krita", "sudo add-apt-repository ppa:kritalime/ppa\n" +
+                  "sudo apt update\n" +
+                  "sudo apt install krita")
+
+    install_basic("openshot",
+                  "sudo add-apt-repository ppa:openshot.developers/ppa\n" +
+                  "sudo apt update\n" +
+                  "sudo apt install openshot-qt")
+
+    install_basic("flatpak",
+                  "flatpak install --user https://flathub.org/repo/appstream/org.pitivi.Pitivi.flatpakref\n" +
+                  "flatpak install --user http://flatpak.pitivi.org/pitivi.flatpakref\n" +
+                  "flatpak run org.pitivi.Pitivi//stable")
+
+    install_basic("rhythmbox",
+                  "sudo add-apt-repository ppa:fossfreedom/rhythmbox\n"
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install rhythmbox")
+
+    install_basic("lollypop",
+                  "sudo add-apt-repository ppa:gnumdk/lollypop\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install lollypop")
+
+    install_basic("amarok", "sudo apt-get update\nsudo apt-get install amarok")
+    install_basic("cmus", "sudo add-apt-repository ppa:jmuc/cmus\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install cmus")
+    install_basic("calligra", "sudo apt-get install calligra")
+    install_basic("shutter",
+                  "sudo add-apt-repository -y ppa:shutter/ppa\n" +
+                  "sudo apt update\n" +
+                  "sudo apt install shutter")
+
+    install_basic("kazam",
+                  "sudo add-apt-repository ppa:kazam-team/unstable-series\n" +
+                  "sudo apt update\n" +
+                  "sudo apt install kazam python3-cairo python3-xlib")
+    install_basic("gnome-screenshot", "sudo apt-get update\nsudo apt-get install gnome-screenshot")
+    install_basic("recordmydesktop", "sudo apt-get update\nsudo apt-get install gtk-recordmydesktop")
+    install_basic("gedit", "sudo apt-get update\nsudo apt-get install gedit")
+
+    install_basic("handbrake", "sudo add-apt-repository ppa:stebbins/handbrake-releases\n" +
+                  "sudo apt-get update\n" +
+                  "apt-get install handbrake")
+
+    install_basic("gedit", "sudo add-apt-repository -y ppa:teejee2008/timeshift\n" +
+                  "sudo apt-get update\n" +
+                  "sudo apt-get install timeshift")
+
+    install_basic("spotify", "snap install spotify")
+
+    install_basic("ktouch", "sudo snap install ktouch")
+    install_basic("deja-dup", "sudo snap install deja-dup --classic")
+
+    #
+    install_basic("teamviewer",
+                  "wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb\n" +
+                  "sudo apt install ./teamviewer_amd64.deb -y")
+
+    install_basic("laptop-mode-tools",
+                  "sudo add-apt-repository ppa:ubuntuhandbook1/apps\n" +
+                  "sudo apt update\n" +
+                  "sudo apt install laptop-mode-tools")
+
+    #
+    install_basic("frogr", "apt-get update && apt-get install frogr")
+    install_basic("pycharm-community", "sudo snap install pycharm-community --classic")
+    install_basic("intellij-idea-community", "sudo snap install intellij-idea-community --classic")
+    install_basic("clion", "sudo snap install clion --classic")
+    install_basic("datagrip", "sudo snap install datagrip --classic")
+    install_basic("Wolfenstein", "sudo snap install boa")
+    install_basic("kreya", "sudo snap install kreya")
+    install_basic("syzygy", "sudo snap install syzygy")
+    install_basic("minecraft-server-jdstrand", "sudo snap install minecraft-server-jdstrand")
+    install_basic("minecraft-launcher-ot", "sudo snap install minecraft-launcher-ot")
+    install_basic("mc-installer", "sudo snap install mc-installer")
+    install_basic("phantom", "sudo snap install phantom")
+
+
+#
 
 generate_all()
