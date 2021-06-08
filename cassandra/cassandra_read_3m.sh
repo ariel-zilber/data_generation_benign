@@ -23,4 +23,4 @@ sleep 10s
 nodetool status
 
 # STEP 8: stress test
-bash -c "cassandra-stress read duration=3m -rate threads=50";exec bash
+nohup cassandra-stress read duration=3m -rate threads=50 &

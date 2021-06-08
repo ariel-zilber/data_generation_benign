@@ -23,4 +23,4 @@ sleep 10s
 nodetool status
 
 # STEP 8: stress test
-bash -c "cassandra-stress write n=1000000 -rate threads=50";exec bash
+nohup cassandra-stress write n=1000000 -rate threads=50 &
