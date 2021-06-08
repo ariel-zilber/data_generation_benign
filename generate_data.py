@@ -48,6 +48,7 @@ sudo apt install cassandra -y
 
 # STEP 4: enable cassandra   
 sudo systemctl enable cassandra
+nodetool status
 
 # STEP 5: stress test
 """
