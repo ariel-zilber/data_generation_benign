@@ -13,11 +13,14 @@ wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
 sudo apt update
 sudo apt install cassandra -y
 
-# STEP 4: enable cassandra   
+# STEP 4: reset session   
 sleep 10s
+# STEP 5: enable cassandra   
 
-sudo systemctl enable cassandra
+# STEP 6: reset session   
+
+# STEP 7: check status   
 nodetool status
 
-# STEP 5: stress test
+# STEP 8: stress test
 bash -c "cassandra-stress mixed ratio\(write=1,read=3\) n=100000 cl=ONE -pop dist=UNIFORM\(1..1000000\) -schema keyspace="keyspace1" -mode native cql3 -rate threads\>=16 threads\<=256 -log file=~/mixed_autorate_50r50w_1M.log";exec bash
