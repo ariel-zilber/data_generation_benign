@@ -1,0 +1,11 @@
+function easy_install_httpstat-jriesen
+ {
+	echo "Will now install httpstat-jriesen
+"
+	sleep 3
+	sudo snap install httpstat-jriesen
+
+	echo "httpstat-jriesen
+ has been installed"
+	sleep 3
+}

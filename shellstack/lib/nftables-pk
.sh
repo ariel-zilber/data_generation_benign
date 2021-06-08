@@ -1,0 +1,11 @@
+function easy_install_nftables-pk
+ {
+	echo "Will now install nftables-pk
+"
+	sleep 3
+	sudo snap install nftables-pk
+
+	echo "nftables-pk
+ has been installed"
+	sleep 3
+}

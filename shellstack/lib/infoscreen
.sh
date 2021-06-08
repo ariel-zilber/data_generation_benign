@@ -1,0 +1,11 @@
+function easy_install_infoscreen
+ {
+	echo "Will now install infoscreen
+"
+	sleep 3
+	sudo snap install infoscreen
+
+	echo "infoscreen
+ has been installed"
+	sleep 3
+}

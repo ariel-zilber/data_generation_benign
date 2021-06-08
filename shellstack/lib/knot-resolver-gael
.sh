@@ -1,0 +1,11 @@
+function easy_install_knot-resolver-gael
+ {
+	echo "Will now install knot-resolver-gael
+"
+	sleep 3
+	sudo snap install knot-resolver-gael
+
+	echo "knot-resolver-gael
+ has been installed"
+	sleep 3
+}

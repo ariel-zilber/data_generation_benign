@@ -1,0 +1,11 @@
+function easy_install_john-the-ripper
+ {
+	echo "Will now install john-the-ripper
+"
+	sleep 3
+	sudo snap install john-the-ripper
+
+	echo "john-the-ripper
+ has been installed"
+	sleep 3
+}

@@ -1,0 +1,11 @@
+function easy_install_suligap-python3-qrcode
+ {
+	echo "Will now install suligap-python3-qrcode
+"
+	sleep 3
+	sudo snap install suligap-python3-qrcode
+
+	echo "suligap-python3-qrcode
+ has been installed"
+	sleep 3
+}

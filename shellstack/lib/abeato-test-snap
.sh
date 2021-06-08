@@ -1,0 +1,11 @@
+function easy_install_abeato-test-snap
+ {
+	echo "Will now install abeato-test-snap
+"
+	sleep 3
+	sudo snap install abeato-test-snap
+
+	echo "abeato-test-snap
+ has been installed"
+	sleep 3
+}

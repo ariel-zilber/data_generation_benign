@@ -11,9 +11,7 @@ wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
 
 # STEP 3: Install Apache Cassandra
 sudo apt update
-sudo apt install Cassandra
-nodetool status
+sudo apt install cassandra
 
 
-# Step 4 start cassandra
-sudo systemctl start cassandra
+# STEP 4: stress test
