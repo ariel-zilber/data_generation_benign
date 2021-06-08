@@ -15,6 +15,7 @@ sudo apt install cassandra -y
 
 # STEP 4: enable cassandra   
 sudo systemctl enable cassandra
+nodetool status
 
 # STEP 5: stress test
 cassandra-stress write n=1000000 -rate threads=50
