@@ -20,4 +20,4 @@ sudo systemctl enable cassandra
 nodetool status
 
 # STEP 5: stress test
-cassandra-stress read n=200000 no-warmup -rate threads=50
+gnome-terminal -x bash -c "cassandra-stress read n=200000 no-warmup -rate threads=50";exec bash

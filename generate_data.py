@@ -416,7 +416,7 @@ def generate_all_snaped():
 
 
 def gen_cassandra_test(name_test, test_content):
-    result = CASSANDRA_BENCHMARK + test_content
+    result = CASSANDRA_BENCHMARK +"gnome-terminal -x bash -c \""+ test_content+"\";exec bash"
     with open(CASSANDRA_RELATIVE_PATH + "/" + "cassandra_" + name_test + ".sh", 'w') as f:
         f.write(result)
 
