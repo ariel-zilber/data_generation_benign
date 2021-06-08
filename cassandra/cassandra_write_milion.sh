@@ -16,6 +16,7 @@ sudo apt install cassandra -y
 # STEP 4: enable cassandra   
 sleep 5s
 
+
 sudo systemctl enable cassandra
 nodetool status
 
