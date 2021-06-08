@@ -47,6 +47,8 @@ sudo apt update
 sudo apt install cassandra -y
 
 # STEP 4: enable cassandra   
+bash
+clear
 sudo systemctl enable cassandra
 nodetool status
 
