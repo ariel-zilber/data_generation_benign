@@ -47,7 +47,7 @@ sudo apt update
 sudo apt install cassandra -y
 
 # STEP 4: enable cassandra   
-sleep 5s
+sleep 10s
 
 sudo systemctl enable cassandra
 nodetool status
@@ -416,7 +416,7 @@ def generate_all_snaped():
 
 
 def gen_cassandra_test(name_test, test_content):
-    result = CASSANDRA_BENCHMARK +"gnome-terminal -x bash -c \""+ test_content+"\";exec bash"
+    result = CASSANDRA_BENCHMARK +"bash -c \""+ test_content+"\";exec bash"
     with open(CASSANDRA_RELATIVE_PATH + "/" + "cassandra_" + name_test + ".sh", 'w') as f:
         f.write(result)
 
