@@ -2,6 +2,9 @@ function easy_install_boondocks-hello-world
  {
 	echo "Will now install boondocks-hello-world
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install boondocks-hello-world
 

@@ -2,6 +2,9 @@ function easy_install_wal-g
  {
 	echo "Will now install wal-g
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install wal-g
 

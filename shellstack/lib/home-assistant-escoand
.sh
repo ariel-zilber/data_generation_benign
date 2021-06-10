@@ -2,6 +2,9 @@ function easy_install_home-assistant-escoand
  {
 	echo "Will now install home-assistant-escoand
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install home-assistant-escoand
 

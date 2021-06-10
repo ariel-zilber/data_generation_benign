@@ -2,6 +2,9 @@ function easy_install_guilherme1guy-pi2-autoosball
  {
 	echo "Will now install guilherme1guy-pi2-autoosball
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install guilherme1guy-pi2-autoosball
 

@@ -2,6 +2,9 @@ function easy_install_quoter
  {
 	echo "Will now install quoter
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install quoter
 

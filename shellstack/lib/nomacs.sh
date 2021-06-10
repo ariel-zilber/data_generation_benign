@@ -1,5 +1,8 @@
 function easy_install_nomacs {
 	echo "Will now install nomacs"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:nomacs/stable
 sudo apt-get update

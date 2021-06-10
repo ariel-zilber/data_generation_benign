@@ -2,6 +2,9 @@ function easy_install_uefi-fw-tools
  {
 	echo "Will now install uefi-fw-tools
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install uefi-fw-tools
 

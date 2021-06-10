@@ -2,6 +2,9 @@ function easy_install_test-snapd-pulseaudio
  {
 	echo "Will now install test-snapd-pulseaudio
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install test-snapd-pulseaudio
 

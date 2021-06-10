@@ -2,6 +2,9 @@ function easy_install_ll-mec
  {
 	echo "Will now install ll-mec
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install ll-mec
 

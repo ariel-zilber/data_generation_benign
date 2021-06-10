@@ -2,6 +2,9 @@ function easy_install_john-the-ripper
  {
 	echo "Will now install john-the-ripper
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install john-the-ripper
 

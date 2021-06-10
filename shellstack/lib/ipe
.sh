@@ -2,6 +2,9 @@ function easy_install_ipe
  {
 	echo "Will now install ipe
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install ipe
 

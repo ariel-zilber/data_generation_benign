@@ -2,6 +2,9 @@ function easy_install_hey-mail
  {
 	echo "Will now install hey-mail
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install hey-mail
 

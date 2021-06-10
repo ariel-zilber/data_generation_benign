@@ -2,6 +2,9 @@ function easy_install_litecoin-core
  {
 	echo "Will now install litecoin-core
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install litecoin-core
 

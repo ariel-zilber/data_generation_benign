@@ -2,6 +2,9 @@ function easy_install_ktimer
  {
 	echo "Will now install ktimer
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install ktimer
 

@@ -2,6 +2,9 @@ function easy_install_tinc-vpn
  {
 	echo "Will now install tinc-vpn
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install tinc-vpn
 

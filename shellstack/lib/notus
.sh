@@ -2,6 +2,9 @@ function easy_install_notus
  {
 	echo "Will now install notus
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install notus
 

@@ -2,6 +2,9 @@ function easy_install_code-insiders
  {
 	echo "Will now install code-insiders
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install code-insiders
 

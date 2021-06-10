@@ -1,5 +1,8 @@
 function easy_install_conky-manager {
 	echo "Will now install conky-manager"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:teejee2008/ppa
 sudo apt-get update

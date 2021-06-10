@@ -2,6 +2,9 @@ function easy_install_hascard
  {
 	echo "Will now install hascard
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install hascard
 

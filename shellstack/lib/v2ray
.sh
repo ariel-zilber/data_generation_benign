@@ -2,6 +2,9 @@ function easy_install_v2ray
  {
 	echo "Will now install v2ray
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install v2ray
 

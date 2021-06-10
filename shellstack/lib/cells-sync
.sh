@@ -2,6 +2,9 @@ function easy_install_cells-sync
  {
 	echo "Will now install cells-sync
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install cells-sync
 

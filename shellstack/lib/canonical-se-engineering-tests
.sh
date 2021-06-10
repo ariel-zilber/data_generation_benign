@@ -2,6 +2,9 @@ function easy_install_canonical-se-engineering-tests
  {
 	echo "Will now install canonical-se-engineering-tests
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install canonical-se-engineering-tests
 

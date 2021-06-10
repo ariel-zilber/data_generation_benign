@@ -2,6 +2,9 @@ function easy_install_goldendictionary
  {
 	echo "Will now install goldendictionary
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install goldendictionary
 

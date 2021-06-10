@@ -5,6 +5,9 @@ import os
 
 LIB_TEMPLATE = """function easy_install_%s {
 	echo "%s"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	%s
 	echo "%s"
@@ -43,7 +46,10 @@ cd install_cassandra-main/
 sudo chmod 777 *
 ./install_cassandra.sh
 
-# STEP 3: run stress test
+# STEP 3: wait
+sleep 2m
+
+# STEP 4: run stress test
 """
 
 
@@ -430,5 +436,7 @@ def generate_cassandra_benchmark_test():
                                 "-rate threads\>=16 threads\<=256 "
                                 "-log file=~/mixed_autorate_50r50w_1M.log")
 
-
-generate_cassandra_benchmark_test()
+if __name__ == '__main__':
+    generate_all_manual()
+    generate_all_snaped()
+    generate_cassandra_benchmark_test()

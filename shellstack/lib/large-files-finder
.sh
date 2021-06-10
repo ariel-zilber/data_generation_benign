@@ -2,6 +2,9 @@ function easy_install_large-files-finder
  {
 	echo "Will now install large-files-finder
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install large-files-finder
 

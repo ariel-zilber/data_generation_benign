@@ -2,6 +2,9 @@ function easy_install_youtube-dl-casept
  {
 	echo "Will now install youtube-dl-casept
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install youtube-dl-casept
 

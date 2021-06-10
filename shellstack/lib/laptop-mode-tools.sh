@@ -1,5 +1,8 @@
 function easy_install_laptop-mode-tools {
 	echo "Will now install laptop-mode-tools"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:ubuntuhandbook1/apps
 sudo apt update

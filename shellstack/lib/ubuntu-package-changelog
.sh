@@ -2,6 +2,9 @@ function easy_install_ubuntu-package-changelog
  {
 	echo "Will now install ubuntu-package-changelog
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install ubuntu-package-changelog
 

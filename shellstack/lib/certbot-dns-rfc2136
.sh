@@ -2,6 +2,9 @@ function easy_install_certbot-dns-rfc2136
  {
 	echo "Will now install certbot-dns-rfc2136
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install certbot-dns-rfc2136
 

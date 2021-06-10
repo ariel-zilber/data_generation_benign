@@ -2,6 +2,9 @@ function easy_install_electron-quick-start
  {
 	echo "Will now install electron-quick-start
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install electron-quick-start
 

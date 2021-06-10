@@ -2,6 +2,9 @@ function easy_install_smartstock
  {
 	echo "Will now install smartstock
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install smartstock
 

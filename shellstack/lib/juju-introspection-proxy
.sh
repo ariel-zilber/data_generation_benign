@@ -2,6 +2,9 @@ function easy_install_juju-introspection-proxy
  {
 	echo "Will now install juju-introspection-proxy
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install juju-introspection-proxy
 

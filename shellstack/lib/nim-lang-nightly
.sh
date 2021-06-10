@@ -2,6 +2,9 @@ function easy_install_nim-lang-nightly
  {
 	echo "Will now install nim-lang-nightly
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install nim-lang-nightly
 

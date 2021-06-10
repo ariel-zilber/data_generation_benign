@@ -2,6 +2,9 @@ function easy_install_amparephonenumberdecoder
  {
 	echo "Will now install amparephonenumberdecoder
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install amparephonenumberdecoder
 

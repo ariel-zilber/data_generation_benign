@@ -2,6 +2,9 @@ function easy_install_abeato-usb-modeswitch
  {
 	echo "Will now install abeato-usb-modeswitch
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install abeato-usb-modeswitch
 

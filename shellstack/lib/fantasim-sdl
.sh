@@ -2,6 +2,9 @@ function easy_install_fantasim-sdl
  {
 	echo "Will now install fantasim-sdl
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install fantasim-sdl
 

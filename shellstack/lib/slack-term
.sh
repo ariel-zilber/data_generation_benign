@@ -2,6 +2,9 @@ function easy_install_slack-term
  {
 	echo "Will now install slack-term
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install slack-term
 

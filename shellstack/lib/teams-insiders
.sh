@@ -2,6 +2,9 @@ function easy_install_teams-insiders
  {
 	echo "Will now install teams-insiders
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install teams-insiders
 

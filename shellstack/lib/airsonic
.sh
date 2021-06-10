@@ -2,6 +2,9 @@ function easy_install_airsonic
  {
 	echo "Will now install airsonic
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install airsonic
 

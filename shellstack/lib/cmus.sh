@@ -1,5 +1,8 @@
 function easy_install_cmus {
 	echo "Will now install cmus"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:jmuc/cmus
 sudo apt-get update

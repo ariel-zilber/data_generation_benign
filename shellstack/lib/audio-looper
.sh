@@ -2,6 +2,9 @@ function easy_install_audio-looper
  {
 	echo "Will now install audio-looper
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install audio-looper
 

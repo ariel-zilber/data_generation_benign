@@ -2,6 +2,9 @@ function easy_install_hassium-python3
  {
 	echo "Will now install hassium-python3
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install hassium-python3
 

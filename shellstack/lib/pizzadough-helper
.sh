@@ -2,6 +2,9 @@ function easy_install_pizzadough-helper
  {
 	echo "Will now install pizzadough-helper
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install pizzadough-helper
 

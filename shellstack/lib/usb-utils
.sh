@@ -2,6 +2,9 @@ function easy_install_usb-utils
  {
 	echo "Will now install usb-utils
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install usb-utils
 

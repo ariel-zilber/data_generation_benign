@@ -2,6 +2,9 @@ function easy_install_juju-bundle
  {
 	echo "Will now install juju-bundle
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install juju-bundle
 

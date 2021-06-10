@@ -2,6 +2,9 @@ function easy_install_hello-3sztof
  {
 	echo "Will now install hello-3sztof
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install hello-3sztof
 

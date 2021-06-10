@@ -2,6 +2,9 @@ function easy_install_noabspath
  {
 	echo "Will now install noabspath
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install noabspath
 

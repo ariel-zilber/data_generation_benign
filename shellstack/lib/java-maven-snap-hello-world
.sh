@@ -2,6 +2,9 @@ function easy_install_java-maven-snap-hello-world
  {
 	echo "Will now install java-maven-snap-hello-world
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install java-maven-snap-hello-world
 

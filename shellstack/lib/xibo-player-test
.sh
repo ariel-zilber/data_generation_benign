@@ -2,6 +2,9 @@ function easy_install_xibo-player-test
  {
 	echo "Will now install xibo-player-test
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install xibo-player-test
 

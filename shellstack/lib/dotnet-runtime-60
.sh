@@ -2,6 +2,9 @@ function easy_install_dotnet-runtime-60
  {
 	echo "Will now install dotnet-runtime-60
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install dotnet-runtime-60
 

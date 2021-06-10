@@ -2,6 +2,9 @@ function easy_install_argos-translate-base-langs
  {
 	echo "Will now install argos-translate-base-langs
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install argos-translate-base-langs
 

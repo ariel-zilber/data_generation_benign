@@ -1,5 +1,8 @@
 function easy_install_Qmmp {
 	echo "Will now install Qmmp"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	 sudo add-apt-repository ppa:forkotov02/ppa
 sudo apt-get update

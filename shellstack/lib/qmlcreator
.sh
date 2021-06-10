@@ -2,6 +2,9 @@ function easy_install_qmlcreator
  {
 	echo "Will now install qmlcreator
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install qmlcreator
 

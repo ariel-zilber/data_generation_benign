@@ -2,6 +2,9 @@ function easy_install_27forex-mobius
  {
 	echo "Will now install 27forex-mobius
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install 27forex-mobius
 

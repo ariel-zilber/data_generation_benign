@@ -2,6 +2,9 @@ function easy_install_ubuntu-launcher-integration-snap
  {
 	echo "Will now install ubuntu-launcher-integration-snap
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install ubuntu-launcher-integration-snap
 

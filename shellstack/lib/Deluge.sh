@@ -1,5 +1,8 @@
 function easy_install_Deluge {
 	echo "Will now install Deluge"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:deluge-team/ppa
 sudo apt-get update

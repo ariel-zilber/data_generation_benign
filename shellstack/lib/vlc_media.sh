@@ -1,5 +1,8 @@
 function easy_install_vlc_media {
 	echo "Will now install vlc_media"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:videolan/master-daily -y 
 sudo apt-get update

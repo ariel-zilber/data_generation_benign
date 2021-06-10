@@ -2,6 +2,9 @@ function easy_install_iotnxt-httpstat
  {
 	echo "Will now install iotnxt-httpstat
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install iotnxt-httpstat
 

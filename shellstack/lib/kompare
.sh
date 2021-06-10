@@ -2,6 +2,9 @@ function easy_install_kompare
  {
 	echo "Will now install kompare
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install kompare
 

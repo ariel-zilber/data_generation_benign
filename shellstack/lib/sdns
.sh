@@ -2,6 +2,9 @@ function easy_install_sdns
  {
 	echo "Will now install sdns
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install sdns
 

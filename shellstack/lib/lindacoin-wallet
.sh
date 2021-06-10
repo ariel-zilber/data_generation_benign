@@ -2,6 +2,9 @@ function easy_install_lindacoin-wallet
  {
 	echo "Will now install lindacoin-wallet
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install lindacoin-wallet
 

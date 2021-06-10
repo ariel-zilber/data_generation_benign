@@ -2,6 +2,9 @@ function easy_install_quasselcore-kalikiana
  {
 	echo "Will now install quasselcore-kalikiana
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install quasselcore-kalikiana
 

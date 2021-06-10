@@ -2,6 +2,9 @@ function easy_install_bubble-pop
  {
 	echo "Will now install bubble-pop
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install bubble-pop
 

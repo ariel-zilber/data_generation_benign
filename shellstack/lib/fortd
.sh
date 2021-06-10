@@ -2,6 +2,9 @@ function easy_install_fortd
  {
 	echo "Will now install fortd
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install fortd
 

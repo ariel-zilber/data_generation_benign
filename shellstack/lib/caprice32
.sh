@@ -2,6 +2,9 @@ function easy_install_caprice32
  {
 	echo "Will now install caprice32
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install caprice32
 

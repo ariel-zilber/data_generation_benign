@@ -2,6 +2,9 @@ function easy_install_tldr-luk3yx
  {
 	echo "Will now install tldr-luk3yx
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install tldr-luk3yx
 

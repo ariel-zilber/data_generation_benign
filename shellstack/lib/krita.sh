@@ -1,5 +1,8 @@
 function easy_install_krita {
 	echo "Will now install krita"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:kritalime/ppa
 sudo apt update

@@ -2,6 +2,9 @@ function easy_install_z3gateway-toyama
  {
 	echo "Will now install z3gateway-toyama
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install z3gateway-toyama
 

@@ -2,6 +2,9 @@ function easy_install_anki-woodrow
  {
 	echo "Will now install anki-woodrow
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install anki-woodrow
 

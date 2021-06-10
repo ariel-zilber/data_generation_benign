@@ -2,6 +2,9 @@ function easy_install_polar-bookshelf
  {
 	echo "Will now install polar-bookshelf
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install polar-bookshelf
 

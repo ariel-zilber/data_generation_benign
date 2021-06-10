@@ -2,6 +2,9 @@ function easy_install_ffmpeg-integration-lgpl
  {
 	echo "Will now install ffmpeg-integration-lgpl
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install ffmpeg-integration-lgpl
 

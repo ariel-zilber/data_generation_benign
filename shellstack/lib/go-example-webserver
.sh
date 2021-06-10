@@ -2,6 +2,9 @@ function easy_install_go-example-webserver
  {
 	echo "Will now install go-example-webserver
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install go-example-webserver
 

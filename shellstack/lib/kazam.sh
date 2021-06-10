@@ -1,5 +1,8 @@
 function easy_install_kazam {
 	echo "Will now install kazam"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:kazam-team/unstable-series
 sudo apt update

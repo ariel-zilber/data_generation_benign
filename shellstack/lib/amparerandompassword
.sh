@@ -2,6 +2,9 @@ function easy_install_amparerandompassword
  {
 	echo "Will now install amparerandompassword
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install amparerandompassword
 

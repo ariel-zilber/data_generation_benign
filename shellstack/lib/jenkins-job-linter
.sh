@@ -2,6 +2,9 @@ function easy_install_jenkins-job-linter
  {
 	echo "Will now install jenkins-job-linter
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install jenkins-job-linter
 

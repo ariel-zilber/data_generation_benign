@@ -2,6 +2,9 @@ function easy_install_wfc-cmars
  {
 	echo "Will now install wfc-cmars
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install wfc-cmars
 

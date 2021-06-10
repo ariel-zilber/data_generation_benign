@@ -2,6 +2,9 @@ function easy_install_libreflix-desktop
  {
 	echo "Will now install libreflix-desktop
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install libreflix-desktop
 

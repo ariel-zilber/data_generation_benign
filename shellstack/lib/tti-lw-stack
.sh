@@ -2,6 +2,9 @@ function easy_install_tti-lw-stack
  {
 	echo "Will now install tti-lw-stack
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install tti-lw-stack
 

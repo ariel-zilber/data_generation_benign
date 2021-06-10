@@ -2,6 +2,9 @@ function easy_install_h2e-smart-home
  {
 	echo "Will now install h2e-smart-home
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install h2e-smart-home
 

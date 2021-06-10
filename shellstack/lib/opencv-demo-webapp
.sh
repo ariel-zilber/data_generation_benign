@@ -2,6 +2,9 @@ function easy_install_opencv-demo-webapp
  {
 	echo "Will now install opencv-demo-webapp
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install opencv-demo-webapp
 

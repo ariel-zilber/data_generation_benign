@@ -2,6 +2,9 @@ function easy_install_xbill-xaw
  {
 	echo "Will now install xbill-xaw
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install xbill-xaw
 

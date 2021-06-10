@@ -2,6 +2,9 @@ function easy_install_pre-commit
  {
 	echo "Will now install pre-commit
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install pre-commit
 

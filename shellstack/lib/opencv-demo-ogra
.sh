@@ -2,6 +2,9 @@ function easy_install_opencv-demo-ogra
  {
 	echo "Will now install opencv-demo-ogra
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install opencv-demo-ogra
 

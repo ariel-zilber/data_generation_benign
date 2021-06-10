@@ -1,5 +1,8 @@
 function easy_install_plume-creator {
 	echo "Will now install plume-creator"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo apt-get install plume-creator
 

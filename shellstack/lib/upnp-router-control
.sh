@@ -2,6 +2,9 @@ function easy_install_upnp-router-control
  {
 	echo "Will now install upnp-router-control
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install upnp-router-control
 

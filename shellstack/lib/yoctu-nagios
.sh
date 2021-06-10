@@ -2,6 +2,9 @@ function easy_install_yoctu-nagios
  {
 	echo "Will now install yoctu-nagios
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install yoctu-nagios
 

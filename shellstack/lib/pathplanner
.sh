@@ -2,6 +2,9 @@ function easy_install_pathplanner
  {
 	echo "Will now install pathplanner
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install pathplanner
 

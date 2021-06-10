@@ -1,5 +1,8 @@
 function easy_install_indicator-weather {
 	echo "Will now install indicator-weather"
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo add-apt-repository ppa:kasra-mp/ubuntu-indicator-weather
 sudo apt update

@@ -2,6 +2,9 @@ function easy_install_asm2go
  {
 	echo "Will now install asm2go
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install asm2go
 

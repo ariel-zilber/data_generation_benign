@@ -2,6 +2,9 @@ function easy_install_gnome-nibbles
  {
 	echo "Will now install gnome-nibbles
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install gnome-nibbles
 

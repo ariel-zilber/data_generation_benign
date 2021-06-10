@@ -2,6 +2,9 @@ function easy_install_mc-server-installer
  {
 	echo "Will now install mc-server-installer
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install mc-server-installer
 

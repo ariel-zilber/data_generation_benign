@@ -2,6 +2,9 @@ function easy_install_verum-cli
  {
 	echo "Will now install verum-cli
 "
+	sudo apt-get update
+	sleep 2m
+	#
 	sleep 3
 	sudo snap install verum-cli
 
