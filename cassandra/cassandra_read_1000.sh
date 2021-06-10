@@ -1,26 +1,14 @@
 
 #!/bin/bash
 
-# STEP 1: Install Packages Necessary for Apache Cassandra
-sudo apt install openjdk-8-jdk -y
-sudo apt install apt-transport-https -y
+# STEP 1: get install script
+wget wget https://github.com/arikzilWork/install_cassandra/archive/refs/heads/main.zip
+unzip main.zip
 
-# STEP 2: Add Apache Cassandra Repository and Import GPG Key
-sudo sh -c 'echo "deb http://www.apache.org/dist/cassandra/debian 40x main" > /etc/apt/sources.list.d/cassandra.list'
-wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
+# STEP 2: run install script
+cd install_cassandra-main/
+sudo chmod 777 *
+./install_cassandra.sh
 
-# STEP 3: Install Apache Cassandra
-sudo apt update
-sudo apt install cassandra -y
-
-# STEP 4: reset session   
-sleep 10s
-# STEP 5: enable cassandra   
-
-# STEP 6: reset session   
-
-# STEP 7: check status   
-nodetool status
-
-# STEP 8: stress test
+# STEP 3: run stress test
 nohup cassandra-stress read n=200000 -rate threads=50 &
