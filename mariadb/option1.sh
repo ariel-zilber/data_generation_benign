@@ -42,4 +42,3 @@ SQL="${Q1}${Q2}"
 $MYSQL -uroot -ppass -e "$SQL"
 
 service mysql restart
-sudo mysql --execute="GRANT ALL PRIVILEGES ON database.* TO 'user'@'localhost';"
