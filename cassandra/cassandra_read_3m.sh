@@ -13,8 +13,10 @@ wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
 sudo apt update
 sudo apt install cassandra -y
 
-# STEP 4: reset session   
-sleep 10s
+# STEP 4: reset session
+reset
+
+sleep 30s
 # STEP 5: enable cassandra   
 
 # STEP 6: reset session   
@@ -23,4 +25,5 @@ sleep 10s
 nodetool status
 
 # STEP 8: stress test
-nohup cassandra-stress read duration=3m -rate threads=50 &
+
+cassandra-stress read duration=3m -rate threads=50
