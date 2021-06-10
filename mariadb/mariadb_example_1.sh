@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip
@@ -10,5 +11,10 @@ sudo chmod 777 *
 
 # STEP 3: wait
 sleep 2m
-
-mysqlap -a --iterations=100
+ mysqlslap 
+ --delimiter=";" 
+ --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)"
+ --query="SELECT * FROM t"
+ --concurrency=40
+ --iterations=100
+     

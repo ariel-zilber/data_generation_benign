@@ -42,3 +42,4 @@ SQL="${Q1}${Q2}"
 $MYSQL -uroot -ppass -e "$SQL"
 
 service mysql restart
+sudo apt-get install sysbench -y

@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip
@@ -10,5 +11,4 @@ sudo chmod 777 *
 
 # STEP 3: wait
 sleep 2m
-
-mysqlap -a --iterations=100
+ cassandra-stress read n=200000 -rate threads=50 

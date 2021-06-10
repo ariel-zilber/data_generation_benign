@@ -34,6 +34,22 @@ function install_%s {
 
 RECIPES_RELATIVE_PATH = "shellstack/recipes/"
 CASSANDRA_RELATIVE_PATH = "cassandra/"
+MARIADB_RELATIVE_PATH="mariadb/"
+MARIADB_BENCHMARK="""
+#!/bin/bash
+
+wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip
+unzip main.zip
+
+cd install_mariadb
+sudo chmod 777 *
+./install_mariadb.sh
+
+
+# STEP 3: wait
+sleep 2m
+"""
+
 CASSANDRA_BENCHMARK = """
 #!/bin/bash
 
@@ -417,6 +433,10 @@ def gen_cassandra_test(name_test, test_content):
     with open(CASSANDRA_RELATIVE_PATH + "/" + "cassandra_" + name_test + ".sh", 'w') as f:
         f.write(result)
 
+def gen_mariadb_test(name_test, test_content):
+    result = MARIADB_BENCHMARK + " " + test_content + " "
+    with open(MARIADB_RELATIVE_PATH + "/" + "mariadb_" + name_test + ".sh", 'w') as f:
+        f.write(result)
 
 #
 def generate_cassandra_benchmark_test():
@@ -435,8 +455,22 @@ def generate_cassandra_benchmark_test():
                                 "-mode native cql3 "
                                 "-rate threads\>=16 threads\<=256 "
                                 "-log file=~/mixed_autorate_50r50w_1M.log")
+def generate_mariadb_benchmark_test():
+    """
+    https://mariadb.com/kb/en/mysqlslap/
+
+    """
+    gen_mariadb_test("example_1", """mysqlslap 
+ --delimiter=";" 
+ --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)"
+ --query="SELECT * FROM t"
+ --concurrency=40
+ --iterations=100
+    """)
+    gen_mariadb_test("read_1000", "cassandra-stress read n=200000 -rate threads=50")
 
 if __name__ == '__main__':
-    generate_all_manual()
-    generate_all_snaped()
-    generate_cassandra_benchmark_test()
+    # generate_all_manual()
+    # generate_all_snaped()
+    # generate_cassandra_benchmark_test()
+    generate_mariadb_benchmark_test()
