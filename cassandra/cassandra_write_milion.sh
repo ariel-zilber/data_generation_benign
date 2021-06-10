@@ -11,4 +11,4 @@ sudo chmod 777 *
 ./install_cassandra.sh
 
 # STEP 3: run stress test
-nohup cassandra-stress write n=1000000 -rate threads=50 &
+ cassandra-stress write n=1000000 -rate threads=50 
