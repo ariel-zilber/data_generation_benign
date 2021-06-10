@@ -14,7 +14,7 @@ sudo apt update
 sudo apt install cassandra -y
 
 # STEP 4: reset session   
-sleep 10s
+sleep 90s
 # STEP 5: enable cassandra   
 
 # STEP 6: reset session   
