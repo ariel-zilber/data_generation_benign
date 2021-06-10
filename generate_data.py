@@ -38,10 +38,11 @@ MARIADB_RELATIVE_PATH="mariadb/"
 MARIADB_BENCHMARK="""
 #!/bin/bash
 
-wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip
+wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip main
 unzip main.zip
 
-cd install_mariadb
+cd lsmain/
+
 sudo chmod 777 *
 ./install_mariadb.sh
 
@@ -460,14 +461,21 @@ def generate_mariadb_benchmark_test():
     https://mariadb.com/kb/en/mysqlslap/
 
     """
-    gen_mariadb_test("example_1", """mysqlslap 
- --delimiter=";" 
- --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)"
- --query="SELECT * FROM t"
- --concurrency=40
- --iterations=100
+    gen_mariadb_test("example_basic", """mysqlslap 
+ --delimiter=";" \\
+ --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)" \\
+ --query="SELECT * FROM t" \\
+ --concurrency=40 \\
+ --iterations=100 \\
     """)
-    gen_mariadb_test("read_1000", "cassandra-stress read n=200000 -rate threads=50")
+
+    gen_mariadb_test("example_intense", """mysqlslap 
+ --delimiter=";" \\
+ --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)" \\
+ --query="SELECT * FROM t" \\
+ --concurrency=40 \\
+ --iterations=10000 \\
+    """)
 
 if __name__ == '__main__':
     # generate_all_manual()
