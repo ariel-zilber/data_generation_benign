@@ -37,6 +37,8 @@ CASSANDRA_RELATIVE_PATH = "cassandra/"
 MARIADB_RELATIVE_PATH="mariadb/"
 MARIADB_BENCHMARK="""
 #!/bin/bash
+sleep 5m
+apt install unzip
 
 wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip main
 unzip main.zip
@@ -53,6 +55,8 @@ sleep 2m
 
 CASSANDRA_BENCHMARK = """
 #!/bin/bash
+sleep 5m
+apt install unzip
 
 # STEP 1: get install script
 wget wget https://github.com/arikzilWork/install_cassandra/archive/refs/heads/main.zip
@@ -466,7 +470,7 @@ def generate_mariadb_benchmark_test():
  --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)" \\
  --query="SELECT * FROM t" \\
  --concurrency=40 \\
- --iterations=100 \\
+ --iterations=100 
     """)
 
     gen_mariadb_test("example_intense", """mysqlslap 
@@ -474,7 +478,7 @@ def generate_mariadb_benchmark_test():
  --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)" \\
  --query="SELECT * FROM t" \\
  --concurrency=40 \\
- --iterations=10000 \\
+ --iterations=10000 
     """)
 
 if __name__ == '__main__':
