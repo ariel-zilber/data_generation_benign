@@ -1,5 +1,4 @@
-function easy_install_unity-tweak-tool {
-	echo "Will now install unity-tweak-tool"
+echo "Will now install unity-tweak-tool"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_unity-tweak-tool {
 	sudo apt-get install  -y unity-tweak-tool
 	echo "unity-tweak-tool has been installed"
 	sleep 3
-}

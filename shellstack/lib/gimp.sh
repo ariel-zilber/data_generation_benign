@@ -1,5 +1,4 @@
-function easy_install_gimp {
-	echo "Will now install gimp"
+echo "Will now install gimp"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_gimp {
 	sudo apt-get install  -y gimp
 	echo "gimp has been installed"
 	sleep 3
-}

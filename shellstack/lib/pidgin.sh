@@ -1,5 +1,4 @@
-function easy_install_pidgin {
-	echo "Will now install pidgin"
+echo "Will now install pidgin"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_pidgin {
 	sudo apt-get install pidgin
 	echo "pidgin has been installed"
 	sleep 3
-}

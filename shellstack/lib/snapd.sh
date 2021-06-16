@@ -1,5 +1,4 @@
-function easy_install_snapd {
-	echo "Will now install snapd"
+echo "Will now install snapd"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_snapd {
 sudo snap install code --classic
 	echo "snapd has been installed"
 	sleep 3
-}

@@ -1,5 +1,4 @@
-function easy_install_lollypop {
-	echo "Will now install lollypop"
+echo "Will now install lollypop"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install lollypop
 	echo "lollypop has been installed"
 	sleep 3
-}

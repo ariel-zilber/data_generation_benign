@@ -1,5 +1,4 @@
-function easy_install_corebird {
-	echo "Will now install corebird"
+echo "Will now install corebird"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_corebird {
 	 sudo snap install corebird
 	echo "corebird has been installed"
 	sleep 3
-}

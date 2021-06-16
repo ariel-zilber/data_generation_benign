@@ -3,8 +3,7 @@
 """
 import os
 
-LIB_TEMPLATE = """function easy_install_%s {
-	echo "%s"
+LIB_TEMPLATE = """echo "%s"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -12,7 +11,7 @@ LIB_TEMPLATE = """function easy_install_%s {
 	%s
 	echo "%s"
 	sleep 3
-}"""
+"""
 
 LIB_RELATIVE_PATH = "shellstack/lib/"
 
@@ -34,23 +33,28 @@ function install_%s {
 
 RECIPES_RELATIVE_PATH = "shellstack/recipes/"
 CASSANDRA_RELATIVE_PATH = "cassandra/"
-MARIADB_RELATIVE_PATH="mariadb/"
-MARIADB_BENCHMARK="""
+MARIADB_RELATIVE_PATH = "mariadb/"
+MARIADB_BENCHMARK = """
 #!/bin/bash
 sleep 5m
 apt install unzip
 
-wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip main
+wget https://github.com/arikzilWork/install_mariadb/archive/refs/heads/main.zip 
 unzip main.zip
 
-cd lsmain/
+cd install_mariadb-main/
 
 sudo chmod 777 *
 ./install_mariadb.sh
 
+# 
+sed -i '/default-character-set = utf8mb4/d' /etc/mysql/mariadb.conf.d/50-client.cnf
+systemctl restart mariadb.service
 
 # STEP 3: wait
 sleep 2m
+
+
 """
 
 CASSANDRA_BENCHMARK = """
@@ -82,7 +86,7 @@ def create_lib_file(package_name: str, install_command: str):
     :return:
     """
     with open(LIB_RELATIVE_PATH + "/" + package_name + ".sh", "w") as f:
-        f.write(LIB_TEMPLATE % (package_name, "Will now install " + package_name,
+        f.write(LIB_TEMPLATE % ("Will now install " + package_name,
                                 install_command, package_name + " has been installed")
                 )
 
@@ -428,7 +432,12 @@ def generate_all_snaped():
     with open("utils/snap-list.txt", "r+") as f:
         lines = f.readlines()
         for line in lines:
-            install_basic(line, "sudo snap install " + line)
+            #
+            install_cmd = "sudo snap install " + line
+            uninstall_cmd = install_cmd + "\n" + "sudo snap remove " + line
+
+            install_basic("install_" + line, install_cmd)
+            install_basic("install_uninstall_" + line, uninstall_cmd)
 
             print(line)
 
@@ -438,10 +447,12 @@ def gen_cassandra_test(name_test, test_content):
     with open(CASSANDRA_RELATIVE_PATH + "/" + "cassandra_" + name_test + ".sh", 'w') as f:
         f.write(result)
 
+
 def gen_mariadb_test(name_test, test_content):
     result = MARIADB_BENCHMARK + " " + test_content + " "
     with open(MARIADB_RELATIVE_PATH + "/" + "mariadb_" + name_test + ".sh", 'w') as f:
         f.write(result)
+
 
 #
 def generate_cassandra_benchmark_test():
@@ -460,12 +471,14 @@ def generate_cassandra_benchmark_test():
                                 "-mode native cql3 "
                                 "-rate threads\>=16 threads\<=256 "
                                 "-log file=~/mixed_autorate_50r50w_1M.log")
+
+
 def generate_mariadb_benchmark_test():
     """
     https://mariadb.com/kb/en/mysqlslap/
 
     """
-    gen_mariadb_test("example_basic", """mysqlslap 
+    gen_mariadb_test("example_basic", """mysqlslap  \\
  --delimiter=";" \\
  --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)" \\
  --query="SELECT * FROM t" \\
@@ -473,7 +486,7 @@ def generate_mariadb_benchmark_test():
  --iterations=100 
     """)
 
-    gen_mariadb_test("example_intense", """mysqlslap 
+    gen_mariadb_test("example_intense", """mysqlslap  \\
  --delimiter=";" \\
  --create="CREATE TABLE t (a int);INSERT INTO t VALUES (5)" \\
  --query="SELECT * FROM t" \\
@@ -481,8 +494,9 @@ def generate_mariadb_benchmark_test():
  --iterations=10000 
     """)
 
+
 if __name__ == '__main__':
-    # generate_all_manual()
-    # generate_all_snaped()
+    generate_all_manual()
+    generate_all_snaped()
     # generate_cassandra_benchmark_test()
-    generate_mariadb_benchmark_test()
+    # generate_mariadb_benchmark_test()

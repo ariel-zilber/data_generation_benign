@@ -1,5 +1,4 @@
-function easy_install_xmind {
-	echo "Will now install xmind"
+echo "Will now install xmind"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_xmind {
 	sudo snap install xmind
 	echo "xmind has been installed"
 	sleep 3
-}

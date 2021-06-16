@@ -1,5 +1,4 @@
-function easy_install_inkscape {
-	echo "Will now install inkscape"
+echo "Will now install inkscape"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install inkscape
 	echo "inkscape has been installed"
 	sleep 3
-}

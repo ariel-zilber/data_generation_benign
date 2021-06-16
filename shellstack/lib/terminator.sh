@@ -1,5 +1,4 @@
-function easy_install_terminator {
-	echo "Will now install terminator"
+echo "Will now install terminator"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_terminator {
 	sudo apt-get install terminator
 	echo "terminator has been installed"
 	sleep 3
-}

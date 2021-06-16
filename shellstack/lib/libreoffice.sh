@@ -1,5 +1,4 @@
-function easy_install_libreoffice {
-	echo "Will now install libreoffice"
+echo "Will now install libreoffice"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_libreoffice {
 sudo snap install libreoffice
 	echo "libreoffice has been installed"
 	sleep 3
-}

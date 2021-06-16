@@ -1,5 +1,4 @@
-function easy_install_tilix {
-	echo "Will now install tilix"
+echo "Will now install tilix"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_tilix {
 sudo apt-get install -y tilix
 	echo "tilix has been installed"
 	sleep 3
-}

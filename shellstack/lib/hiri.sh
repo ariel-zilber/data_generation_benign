@@ -1,5 +1,4 @@
-function easy_install_hiri {
-	echo "Will now install hiri"
+echo "Will now install hiri"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_hiri {
 	sudo snap install hiri
 	echo "hiri has been installed"
 	sleep 3
-}

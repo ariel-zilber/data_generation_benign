@@ -1,5 +1,4 @@
-function easy_install_vlc_media {
-	echo "Will now install vlc_media"
+echo "Will now install vlc_media"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install  -y vlc qtwayland5
 	echo "vlc_media has been installed"
 	sleep 3
-}

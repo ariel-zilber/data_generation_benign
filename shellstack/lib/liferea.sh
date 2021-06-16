@@ -1,5 +1,4 @@
-function easy_install_liferea {
-	echo "Will now install liferea"
+echo "Will now install liferea"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
  sudo apt-get install liferea
 	echo "liferea has been installed"
 	sleep 3
-}

@@ -1,5 +1,4 @@
-function easy_install_neofetch {
-	echo "Will now install neofetch"
+echo "Will now install neofetch"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_neofetch {
 sudo snap install neofetch --beta
 	echo "neofetch has been installed"
 	sleep 3
-}

@@ -1,5 +1,4 @@
-function easy_install_font-manager {
-	echo "Will now install font-manager"
+echo "Will now install font-manager"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_font-manager {
 sudo apt-get updatesudo apt-get install font-manager
 	echo "font-manager has been installed"
 	sleep 3
-}

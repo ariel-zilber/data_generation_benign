@@ -1,5 +1,4 @@
-function easy_install_quiterss {
-	echo "Will now install quiterss"
+echo "Will now install quiterss"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_quiterss {
 
 	echo "quiterss has been installed"
 	sleep 3
-}

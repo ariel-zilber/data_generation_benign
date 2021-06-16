@@ -1,5 +1,4 @@
-function easy_install_synaptic {
-	echo "Will now install synaptic"
+echo "Will now install synaptic"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_synaptic {
 	sudo apt-get install  -y synaptic
 	echo "synaptic has been installed"
 	sleep 3
-}

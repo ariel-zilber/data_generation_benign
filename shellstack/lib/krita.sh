@@ -1,5 +1,4 @@
-function easy_install_krita {
-	echo "Will now install krita"
+echo "Will now install krita"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt update
 sudo apt install krita
 	echo "krita has been installed"
 	sleep 3
-}

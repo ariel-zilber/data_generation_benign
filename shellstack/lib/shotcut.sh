@@ -1,5 +1,4 @@
-function easy_install_shotcut {
-	echo "Will now install shotcut"
+echo "Will now install shotcut"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_shotcut {
 	snap install shotcut -- classic
 	echo "shotcut has been installed"
 	sleep 3
-}

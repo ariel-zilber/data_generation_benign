@@ -1,0 +1,13 @@
+echo "Will now install install_uninstall_p7zip-desktop
+"
+	sudo apt-get update
+	sleep 2m
+	#
+	sleep 3
+	sudo snap install p7zip-desktop
+
+sudo snap remove p7zip-desktop
+
+	echo "install_uninstall_p7zip-desktop
+ has been installed"
+	sleep 3

@@ -1,5 +1,4 @@
-function easy_install_laptop-mode-tools {
-	echo "Will now install laptop-mode-tools"
+echo "Will now install laptop-mode-tools"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt update
 sudo apt install laptop-mode-tools
 	echo "laptop-mode-tools has been installed"
 	sleep 3
-}

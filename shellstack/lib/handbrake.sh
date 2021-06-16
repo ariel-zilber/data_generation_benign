@@ -1,5 +1,4 @@
-function easy_install_handbrake {
-	echo "Will now install handbrake"
+echo "Will now install handbrake"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 apt-get install handbrake
 	echo "handbrake has been installed"
 	sleep 3
-}

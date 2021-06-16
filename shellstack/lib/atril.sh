@@ -1,5 +1,4 @@
-function easy_install_atril {
-	echo "Will now install atril"
+echo "Will now install atril"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_atril {
 	 sudo apt-get install atril
 	echo "atril has been installed"
 	sleep 3
-}

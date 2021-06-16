@@ -1,5 +1,4 @@
-function easy_install_flatpak {
-	echo "Will now install flatpak"
+echo "Will now install flatpak"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ flatpak install --user http://flatpak.pitivi.org/pitivi.flatpakref
 flatpak run org.pitivi.Pitivi//stable
 	echo "flatpak has been installed"
 	sleep 3
-}

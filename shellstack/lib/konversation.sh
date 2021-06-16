@@ -1,5 +1,4 @@
-function easy_install_konversation {
-	echo "Will now install konversation"
+echo "Will now install konversation"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_konversation {
 
 	echo "konversation has been installed"
 	sleep 3
-}

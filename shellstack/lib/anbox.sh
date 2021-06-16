@@ -1,5 +1,4 @@
-function easy_install_anbox {
-	echo "Will now install anbox"
+echo "Will now install anbox"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -10,4 +9,3 @@ udo apt install anbox-modules-dkms
 snap install --devmode -- beta anbox
 	echo "anbox has been installed"
 	sleep 3
-}

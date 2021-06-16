@@ -1,5 +1,4 @@
-function easy_install_thonny {
-	echo "Will now install thonny"
+echo "Will now install thonny"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_thonny {
 	sudo apt-get install thonny
 	echo "thonny has been installed"
 	sleep 3
-}

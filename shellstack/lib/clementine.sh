@@ -1,5 +1,4 @@
-function easy_install_clementine {
-	echo "Will now install clementine"
+echo "Will now install clementine"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install  -y clementine
 	echo "clementine has been installed"
 	sleep 3
-}

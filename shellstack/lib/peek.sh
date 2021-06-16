@@ -1,5 +1,4 @@
-function easy_install_peek {
-	echo "Will now install peek"
+echo "Will now install peek"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt update
 sudo apt install peek
 	echo "peek has been installed"
 	sleep 3
-}

@@ -1,0 +1,11 @@
+echo "Will now install install_webrtsp-restream-agent
+"
+	sudo apt-get update
+	sleep 2m
+	#
+	sleep 3
+	sudo snap install webrtsp-restream-agent
+
+	echo "install_webrtsp-restream-agent
+ has been installed"
+	sleep 3

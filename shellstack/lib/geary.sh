@@ -1,5 +1,4 @@
-function easy_install_geary {
-	echo "Will now install geary"
+echo "Will now install geary"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_geary {
 sudo apt install geary
 	echo "geary has been installed"
 	sleep 3
-}

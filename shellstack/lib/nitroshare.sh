@@ -1,5 +1,4 @@
-function easy_install_nitroshare {
-	echo "Will now install nitroshare"
+echo "Will now install nitroshare"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install nitroshare
 	echo "nitroshare has been installed"
 	sleep 3
-}

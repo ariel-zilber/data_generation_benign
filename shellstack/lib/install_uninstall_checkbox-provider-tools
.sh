@@ -1,0 +1,13 @@
+echo "Will now install install_uninstall_checkbox-provider-tools
+"
+	sudo apt-get update
+	sleep 2m
+	#
+	sleep 3
+	sudo snap install checkbox-provider-tools
+
+sudo snap remove checkbox-provider-tools
+
+	echo "install_uninstall_checkbox-provider-tools
+ has been installed"
+	sleep 3

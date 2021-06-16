@@ -1,5 +1,4 @@
-function easy_install_gnome-screenshot {
-	echo "Will now install gnome-screenshot"
+echo "Will now install gnome-screenshot"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_gnome-screenshot {
 sudo apt-get install gnome-screenshot
 	echo "gnome-screenshot has been installed"
 	sleep 3
-}

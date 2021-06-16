@@ -1,0 +1,13 @@
+echo "Will now install install_uninstall_dnsmasq-escoand
+"
+	sudo apt-get update
+	sleep 2m
+	#
+	sleep 3
+	sudo snap install dnsmasq-escoand
+
+sudo snap remove dnsmasq-escoand
+
+	echo "install_uninstall_dnsmasq-escoand
+ has been installed"
+	sleep 3

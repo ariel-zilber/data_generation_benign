@@ -1,5 +1,4 @@
-function easy_install_gdebi {
-	echo "Will now install gdebi"
+echo "Will now install gdebi"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_gdebi {
 	 sudo apt-get install gdebi
 	echo "gdebi has been installed"
 	sleep 3
-}

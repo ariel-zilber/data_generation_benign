@@ -1,5 +1,4 @@
-function easy_install_steam {
-	echo "Will now install steam"
+echo "Will now install steam"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install  -y steam
 	echo "steam has been installed"
 	sleep 3
-}

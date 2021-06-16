@@ -1,5 +1,4 @@
-function easy_install_guake {
-	echo "Will now install guake"
+echo "Will now install guake"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_guake {
 	sudo apt-get install guake
 	echo "guake has been installed"
 	sleep 3
-}

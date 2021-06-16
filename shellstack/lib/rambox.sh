@@ -1,5 +1,4 @@
-function easy_install_rambox {
-	echo "Will now install rambox"
+echo "Will now install rambox"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_rambox {
 sudo snap install rambox
 	echo "rambox has been installed"
 	sleep 3
-}

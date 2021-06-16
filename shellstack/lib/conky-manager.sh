@@ -1,5 +1,4 @@
-function easy_install_conky-manager {
-	echo "Will now install conky-manager"
+echo "Will now install conky-manager"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install conky-manager
 	echo "conky-manager has been installed"
 	sleep 3
-}

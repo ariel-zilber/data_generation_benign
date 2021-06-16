@@ -1,5 +1,4 @@
-function easy_install_geany {
-	echo "Will now install geany"
+echo "Will now install geany"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_geany {
 
 	echo "geany has been installed"
 	sleep 3
-}

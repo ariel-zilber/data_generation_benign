@@ -1,5 +1,4 @@
-function easy_install_skype {
-	echo "Will now install skype"
+echo "Will now install skype"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_skype {
 	sudo snap install  -y skype
 	echo "skype has been installed"
 	sleep 3
-}

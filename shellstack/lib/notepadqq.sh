@@ -1,5 +1,4 @@
-function easy_install_notepadqq {
-	echo "Will now install notepadqq"
+echo "Will now install notepadqq"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install notepadqq
 	echo "notepadqq has been installed"
 	sleep 3
-}

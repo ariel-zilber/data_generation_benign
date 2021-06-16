@@ -1,5 +1,4 @@
-function easy_install_teamviewer {
-	echo "Will now install teamviewer"
+echo "Will now install teamviewer"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_teamviewer {
 sudo apt install ./teamviewer_amd64.deb -y
 	echo "teamviewer has been installed"
 	sleep 3
-}

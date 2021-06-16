@@ -1,5 +1,4 @@
-function easy_install_gedit {
-	echo "Will now install gedit"
+echo "Will now install gedit"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install timeshift
 	echo "gedit has been installed"
 	sleep 3
-}

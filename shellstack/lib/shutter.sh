@@ -1,5 +1,4 @@
-function easy_install_shutter {
-	echo "Will now install shutter"
+echo "Will now install shutter"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt update
 sudo apt install shutter
 	echo "shutter has been installed"
 	sleep 3
-}

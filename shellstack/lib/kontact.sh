@@ -1,5 +1,4 @@
-function easy_install_kontact {
-	echo "Will now install kontact"
+echo "Will now install kontact"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_kontact {
 
 	echo "kontact has been installed"
 	sleep 3
-}

@@ -1,5 +1,4 @@
-function easy_install_rhythmbox {
-	echo "Will now install rhythmbox"
+echo "Will now install rhythmbox"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install rhythmbox
 	echo "rhythmbox has been installed"
 	sleep 3
-}

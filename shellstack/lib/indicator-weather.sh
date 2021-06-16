@@ -1,5 +1,4 @@
-function easy_install_indicator-weather {
-	echo "Will now install indicator-weather"
+echo "Will now install indicator-weather"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt update
 sudo apt install indicator-weather
 	echo "indicator-weather has been installed"
 	sleep 3
-}

@@ -1,5 +1,4 @@
-function easy_install_nautilus-dropbox {
-	echo "Will now install nautilus-dropbox"
+echo "Will now install nautilus-dropbox"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_nautilus-dropbox {
 	 sudo apt-get install nautilus-dropbox
 	echo "nautilus-dropbox has been installed"
 	sleep 3
-}

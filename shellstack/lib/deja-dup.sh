@@ -1,5 +1,4 @@
-function easy_install_deja-dup {
-	echo "Will now install deja-dup"
+echo "Will now install deja-dup"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_deja-dup {
 	sudo snap install deja-dup --classic
 	echo "deja-dup has been installed"
 	sleep 3
-}

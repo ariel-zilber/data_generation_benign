@@ -1,5 +1,4 @@
-function easy_install_MOC {
-	echo "Will now install MOC"
+echo "Will now install MOC"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_MOC {
 	sudo apt-get install moc moc-ffmpeg-plugin
 	echo "MOC has been installed"
 	sleep 3
-}

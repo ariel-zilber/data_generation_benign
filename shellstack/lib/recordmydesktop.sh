@@ -1,5 +1,4 @@
-function easy_install_recordmydesktop {
-	echo "Will now install recordmydesktop"
+echo "Will now install recordmydesktop"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_recordmydesktop {
 sudo apt-get install gtk-recordmydesktop
 	echo "recordmydesktop has been installed"
 	sleep 3
-}

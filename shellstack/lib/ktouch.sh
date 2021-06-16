@@ -1,5 +1,4 @@
-function easy_install_ktouch {
-	echo "Will now install ktouch"
+echo "Will now install ktouch"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_ktouch {
 	sudo snap install ktouch
 	echo "ktouch has been installed"
 	sleep 3
-}

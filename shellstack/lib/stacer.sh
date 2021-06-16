@@ -1,5 +1,4 @@
-function easy_install_stacer {
-	echo "Will now install stacer"
+echo "Will now install stacer"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install stacer
 	echo "stacer has been installed"
 	sleep 3
-}

@@ -1,0 +1,13 @@
+echo "Will now install install_uninstall_gtk-theme-qogirbudgie
+"
+	sudo apt-get update
+	sleep 2m
+	#
+	sleep 3
+	sudo snap install gtk-theme-qogirbudgie
+
+sudo snap remove gtk-theme-qogirbudgie
+
+	echo "install_uninstall_gtk-theme-qogirbudgie
+ has been installed"
+	sleep 3

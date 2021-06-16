@@ -1,5 +1,4 @@
-function easy_install_openshot {
-	echo "Will now install openshot"
+echo "Will now install openshot"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt update
 sudo apt install openshot-qt
 	echo "openshot has been installed"
 	sleep 3
-}

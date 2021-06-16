@@ -1,5 +1,4 @@
-function easy_install_Qmmp {
-	echo "Will now install Qmmp"
+echo "Will now install Qmmp"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install qmmp qmmp-q4 qmmp-plugin-pack-qt4
 	echo "Qmmp has been installed"
 	sleep 3
-}

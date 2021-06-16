@@ -1,5 +1,4 @@
-function easy_install_blender {
-	echo "Will now install blender"
+echo "Will now install blender"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_blender {
 sudo snap install blender --classic
 	echo "blender has been installed"
 	sleep 3
-}

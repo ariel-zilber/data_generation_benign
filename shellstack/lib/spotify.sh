@@ -1,5 +1,4 @@
-function easy_install_spotify {
-	echo "Will now install spotify"
+echo "Will now install spotify"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_spotify {
 	snap install spotify
 	echo "spotify has been installed"
 	sleep 3
-}

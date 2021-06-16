@@ -1,5 +1,4 @@
-function easy_install_digikam {
-	echo "Will now install digikam"
+echo "Will now install digikam"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_digikam {
 sudo snap install digikam --beta
 	echo "digikam has been installed"
 	sleep 3
-}

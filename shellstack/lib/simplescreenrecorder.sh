@@ -1,5 +1,4 @@
-function easy_install_simplescreenrecorder {
-	echo "Will now install simplescreenrecorder"
+echo "Will now install simplescreenrecorder"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -9,4 +8,3 @@ sudo apt-get update
 sudo apt-get install simplescreenrecorder
 	echo "simplescreenrecorder has been installed"
 	sleep 3
-}

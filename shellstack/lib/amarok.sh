@@ -1,5 +1,4 @@
-function easy_install_amarok {
-	echo "Will now install amarok"
+echo "Will now install amarok"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -8,4 +7,3 @@ function easy_install_amarok {
 sudo apt-get install amarok
 	echo "amarok has been installed"
 	sleep 3
-}

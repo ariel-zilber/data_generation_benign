@@ -1,5 +1,4 @@
-function easy_install_calligra {
-	echo "Will now install calligra"
+echo "Will now install calligra"
 	sudo apt-get update
 	sleep 2m
 	#
@@ -7,4 +6,3 @@ function easy_install_calligra {
 	sudo apt-get install calligra
 	echo "calligra has been installed"
 	sleep 3
-}
