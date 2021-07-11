@@ -1,7 +1,9 @@
 """ This module is used to create simple installation scripts
 
 """
+import itertools
 import os
+from itertools import combinations
 
 LIB_TEMPLATE = """echo "%s"
 	sudo apt-get update
@@ -78,7 +80,7 @@ sleep 2m
 """
 
 ###git related #######################################################################################################
-GIT_CONFIG="""#!/bin/bash
+GIT_CONFIG = """#!/bin/bash
 
 # install git
 sudo apt install git-all -y
@@ -88,11 +90,98 @@ git config --global user.name "yosi cohen"
 git config --global user.email "yonicohen187@gmail.com"
 """
 
-GIT_SELECT_RAND_PROJECT="""
+#
+GIT_SELECT_RAND_PROJECT = """
 # select random project from top 100
 allProjects=("https://github.com/freeCodeCamp/freeCodeCamp" "https://github.com/996icu/996.ICU" "https://github.com/EbookFoundation/free-programming-books" "https://github.com/vuejs/vue" "https://github.com/jwasham/coding-interview-university" "https://github.com/sindresorhus/awesome" "https://github.com/kamranahmedse/developer-roadmap" "https://github.com/tensorflow/tensorflow" "https://github.com/twbs/bootstrap" "https://github.com/getify/You-Dont-Know-JS" "https://github.com/public-apis/public-apis" "https://github.com/donnemartin/system-design-primer" "https://github.com/ohmyzsh/ohmyzsh" "https://github.com/flutter/flutter" "https://github.com/github/gitignore" "https://github.com/microsoft/vscode" "https://github.com/torvalds/linux" "https://github.com/trekhleb/javascript-algorithms" "https://github.com/danistefanovic/build-your-own-x" "https://github.com/TheAlgorithms/Python" "https://github.com/airbnb/javascript" "https://github.com/Snailclimb/JavaGuide" "https://github.com/jackfrued/Python-100-Days" "https://github.com/d3/d3" "https://github.com/ytdl-org/youtube-dl" "https://github.com/facebook/react-native" "https://github.com/electron/electron" "https://github.com/jlevy/the-art-of-command-line" "https://github.com/ossu/computer-science" "https://github.com/axios/axios" "https://github.com/justjavac/free-programming-books-zh_CN" "https://github.com/nodejs/node" "https://github.com/kubernetes/kubernetes" "https://github.com/microsoft/terminal" "https://github.com/angular/angular" "https://github.com/microsoft/TypeScript" "https://github.com/mrdoob/three.js" "https://github.com/puppeteer/puppeteer" "https://github.com/animate-css/animate.css" "https://github.com/tensorflow/models" "https://github.com/vercel/next.js" "https://github.com/mui-org/material-ui" "https://github.com/PanJiaChen/vue-element-admin" "https://github.com/iluwatar/java-design-patterns" "https://github.com/goldbergyoni/nodebestpractices" "https://github.com/laravel/laravel" "https://github.com/FortAwesome/Font-Awesome" "https://github.com/avelino/awesome-go" "https://github.com/MisterBooo/LeetCodeAnimation" "https://github.com/storybookjs/storybook" "https://github.com/nvbn/thefuck" "https://github.com/moby/moby" "https://github.com/angular/angular.js" "https://github.com/gothinkster/realworld" "https://github.com/webpack/webpack" "https://github.com/django/django" "https://github.com/microsoft/PowerToys" "https://github.com/tonsky/FiraCode" "https://github.com/rust-lang/rust" "https://github.com/apple/swift" "https://github.com/reduxjs/redux" "https://github.com/spring-projects/spring-boot" "https://github.com/pallets/flask" "https://github.com/atom/atom" "https://github.com/elastic/elasticsearch" "https://github.com/bitcoin/bitcoin" "https://github.com/opencv/opencv" "https://github.com/yangshun/tech-interview-handbook" "https://github.com/doocs/advanced-java" "https://github.com/netdata/netdata" "https://github.com/typicode/json-server" "https://github.com/jquery/jquery" "https://github.com/thedaviddias/Front-End-Checklist" "https://github.com/chartjs/Chart.js" "https://github.com/socketio/socket.io" "https://github.com/expressjs/express" "https://github.com/xingshaocheng/architect-awesome" "https://github.com/kdn251/interviews" "https://github.com/gohugoio/hugo" "https://github.com/adam-p/markdown-here" "https://github.com/tuvtran/project-based-learning" "https://github.com/keras-team/keras" "https://github.com/Genymobile/scrcpy" "https://github.com/httpie/httpie" "https://github.com/chrislgarry/Apollo-11" "https://github.com/h5bp/html5-boilerplate" "https://github.com/josephmisiti/awesome-machine-learning" "https://github.com/ElemeFE/element" "https://github.com/redis/redis" "https://github.com/lodash/lodash" "https://github.com/nvm-sh/nvm" "https://github.com/h5bp/Front-end-Developer-Interview-Questions" "https://github.com/gin-gonic/gin" "https://github.com/Semantic-Org/Semantic-UI" "https://github.com/pytorch/pytorch" "https://github.com/resume/resume.github.com" "https://github.com/ansible/ansible" "https://github.com/protocolbuffers/protobuf" "https://github.com/rails/rails" "https://github.com/sveltejs/svelte")
 rand=$[$RANDOM % ${#allProjects[@]}]
 project=${allProjects[$rand]}
+
+git clone $project test
+cd test
+"""
+
+GIT_ADD_REMOTE_REPOSITORY = """
+git add *
+git commit -m "first commit"
+
+git remote add origin master ""
+"""
+
+#
+GIT_CREATE_ENTER_FOLDER = """
+# create and enter folder
+mkdir test
+cd test
+"""
+
+#
+GIT_RESET_REMOTE = """
+# remote all files from remote
+git rm *
+git commit -m "removed all"
+git push origin master -f
+"""
+
+GIT_CREATE_SINGLE_FILE = """
+# create a single file
+echo "first file" >> README.md
+git add README.md
+git commit -m "added a single file"
+
+"""
+
+GIT_CREATE_MULTIPLE_FILES = """
+# create multiple files
+
+## init random amount of files
+
+## add tje files to git
+
+## commit the files
+echo "first file" >> README.md
+git add README.md
+git commit -m "added multiple files"
+"""
+
+GIT_CREATE_FOLDER_SINGLE = """
+
+# create a single folder
+mkdir example_folder
+touch example_folder/file.txt
+git add *
+git commit -m "added a single folder"
+"""
+
+GIT_CREATE_FOLDER_MULTIPLE = """
+
+# create a multiple folders
+declare -a arr=(1..10)
+
+## now loop through the above array
+for i in "${arr[@]}"
+  mkdir example_folder
+  touch example_folder/file${i}.txt
+  git add *  
+done 
+
+git commit -m "added folders"
+
+"""
+
+GIT_REMOVE_ALL = """
+# remove files git
+git rm * -r
+git add * 
+git commit -m "removed all files"
+
+"""
+
+GIT_SWITCH_BRANCHES = """
+# change to a new branch
+git checkout -b 3d_printer
+git add *
+git commit -m "changed branch"
 """
 
 
@@ -531,15 +620,18 @@ ARCHIVER_RELATIVE_PATH = "archivers/"
 ARCHIVED_FILENAME = "file.txt"
 ARCHIVED_FOLDER = "folder"
 
+GIT_RELATIVE_PATH = "actions_git/"
+
 
 def init_archiver_template():
     start = """#!/bin/bash
 sleep 5m
     """
-    result=start
+    result = start
     for filname in EXAMPLE_FILE_NAMES:
-        result=result+"\nbase64 /dev/urandom | head -c 10000000 >"+ARCHIVED_FOLDER+"/"+filname+".txt"
-    return result+"\n"
+        result = result + "\nbase64 /dev/urandom | head -c 10000000 >" + ARCHIVED_FOLDER + "/" + filname + ".txt"
+    return result + "\n"
+
 
 ARCHIVER_TEMPLATE = init_archiver_template()
 
@@ -552,22 +644,48 @@ def gen_archiver_test(archive_type, archive_content):
 
 def generate_all_archivers():
     """"""
-    gen_archiver_test("bzip2", "bzip2 " + ARCHIVED_FOLDER+"/*")
-    gen_archiver_test("gzip", "gzip " + ARCHIVED_FOLDER+"/*")
-    gen_archiver_test("lrzip", "sudo apt install lrzip\nlrzip " + ARCHIVED_FOLDER+"/*")
-    gen_archiver_test("xz", "xz " + ARCHIVED_FOLDER+"/*")
-    gen_archiver_test("tar", "tar -xvf " + ARCHIVED_FOLDER+"/*")
+    gen_archiver_test("bzip2", "bzip2 " + ARCHIVED_FOLDER + "/*")
+    gen_archiver_test("gzip", "gzip " + ARCHIVED_FOLDER + "/*")
+    gen_archiver_test("lrzip", "sudo apt install lrzip\nlrzip " + ARCHIVED_FOLDER + "/*")
+    gen_archiver_test("xz", "xz " + ARCHIVED_FOLDER + "/*")
+    gen_archiver_test("tar", "tar -xvf " + ARCHIVED_FOLDER + "/*")
     gen_archiver_test("7zip", """
 sudo add-apt-repository universe
 sudo apt install p7zip-full p7zip-rar
-7z e """ + ARCHIVED_FOLDER+"/*")
+7z e """ + ARCHIVED_FOLDER + "/*")
 
 
+def gen_git_test(file_type, git_content):
+    result = GIT_CONFIG + "" + git_content + " "
+    with open(GIT_RELATIVE_PATH + "/" + "git_command_" + file_type + ".sh", 'w') as f:
+        f.write(result)
 
 
+def generate_git_actions():
+    create_folder = [GIT_CREATE_ENTER_FOLDER,
+                     GIT_SELECT_RAND_PROJECT]
+    setup_remote = [GIT_SELECT_RAND_PROJECT]
 
+    file_folder_creation_options = [GIT_CREATE_SINGLE_FILE,
+                                    GIT_CREATE_SINGLE_FILE + GIT_CREATE_FOLDER_SINGLE,
+                                    GIT_CREATE_SINGLE_FILE + GIT_CREATE_FOLDER_MULTIPLE,
+                                    GIT_CREATE_MULTIPLE_FILES,
+                                    GIT_CREATE_MULTIPLE_FILES + GIT_CREATE_FOLDER_SINGLE,
+                                    GIT_CREATE_MULTIPLE_FILES + GIT_CREATE_FOLDER_MULTIPLE,
+                                    ]
+    remove_files = [GIT_REMOVE_ALL]
+    switch_branches = [GIT_SWITCH_BRANCHES]
+    reset_remote = [GIT_RESET_REMOTE]
 
-
+    #
+    all_options = itertools.product(create_folder,
+                                    setup_remote,
+                                    file_folder_creation_options,
+                                    remove_files,
+                                    switch_branches,
+                                    reset_remote)
+    for option in all_options:
+        print(option)
 
 
 if __name__ == '__main__':
@@ -575,4 +693,5 @@ if __name__ == '__main__':
     # generate_all_snaped()
     # generate_cassandra_benchmark_test()
     # generate_mariadb_benchmark_test()
-    generate_all_archivers()
+    # generate_all_archivers()
+    generate_git_actions()
