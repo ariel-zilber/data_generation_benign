@@ -77,6 +77,24 @@ sleep 2m
 # STEP 4: run stress test
 """
 
+###git related #######################################################################################################
+GIT_CONFIG="""#!/bin/bash
+
+# install git
+sudo apt install git-all -y
+
+# setup credentials
+git config --global user.name "yosi cohen"
+git config --global user.email "yonicohen187@gmail.com"
+"""
+
+GIT_SELECT_RAND_PROJECT="""
+# select random project from top 100
+allProjects=("https://github.com/freeCodeCamp/freeCodeCamp" "https://github.com/996icu/996.ICU" "https://github.com/EbookFoundation/free-programming-books" "https://github.com/vuejs/vue" "https://github.com/jwasham/coding-interview-university" "https://github.com/sindresorhus/awesome" "https://github.com/kamranahmedse/developer-roadmap" "https://github.com/tensorflow/tensorflow" "https://github.com/twbs/bootstrap" "https://github.com/getify/You-Dont-Know-JS" "https://github.com/public-apis/public-apis" "https://github.com/donnemartin/system-design-primer" "https://github.com/ohmyzsh/ohmyzsh" "https://github.com/flutter/flutter" "https://github.com/github/gitignore" "https://github.com/microsoft/vscode" "https://github.com/torvalds/linux" "https://github.com/trekhleb/javascript-algorithms" "https://github.com/danistefanovic/build-your-own-x" "https://github.com/TheAlgorithms/Python" "https://github.com/airbnb/javascript" "https://github.com/Snailclimb/JavaGuide" "https://github.com/jackfrued/Python-100-Days" "https://github.com/d3/d3" "https://github.com/ytdl-org/youtube-dl" "https://github.com/facebook/react-native" "https://github.com/electron/electron" "https://github.com/jlevy/the-art-of-command-line" "https://github.com/ossu/computer-science" "https://github.com/axios/axios" "https://github.com/justjavac/free-programming-books-zh_CN" "https://github.com/nodejs/node" "https://github.com/kubernetes/kubernetes" "https://github.com/microsoft/terminal" "https://github.com/angular/angular" "https://github.com/microsoft/TypeScript" "https://github.com/mrdoob/three.js" "https://github.com/puppeteer/puppeteer" "https://github.com/animate-css/animate.css" "https://github.com/tensorflow/models" "https://github.com/vercel/next.js" "https://github.com/mui-org/material-ui" "https://github.com/PanJiaChen/vue-element-admin" "https://github.com/iluwatar/java-design-patterns" "https://github.com/goldbergyoni/nodebestpractices" "https://github.com/laravel/laravel" "https://github.com/FortAwesome/Font-Awesome" "https://github.com/avelino/awesome-go" "https://github.com/MisterBooo/LeetCodeAnimation" "https://github.com/storybookjs/storybook" "https://github.com/nvbn/thefuck" "https://github.com/moby/moby" "https://github.com/angular/angular.js" "https://github.com/gothinkster/realworld" "https://github.com/webpack/webpack" "https://github.com/django/django" "https://github.com/microsoft/PowerToys" "https://github.com/tonsky/FiraCode" "https://github.com/rust-lang/rust" "https://github.com/apple/swift" "https://github.com/reduxjs/redux" "https://github.com/spring-projects/spring-boot" "https://github.com/pallets/flask" "https://github.com/atom/atom" "https://github.com/elastic/elasticsearch" "https://github.com/bitcoin/bitcoin" "https://github.com/opencv/opencv" "https://github.com/yangshun/tech-interview-handbook" "https://github.com/doocs/advanced-java" "https://github.com/netdata/netdata" "https://github.com/typicode/json-server" "https://github.com/jquery/jquery" "https://github.com/thedaviddias/Front-End-Checklist" "https://github.com/chartjs/Chart.js" "https://github.com/socketio/socket.io" "https://github.com/expressjs/express" "https://github.com/xingshaocheng/architect-awesome" "https://github.com/kdn251/interviews" "https://github.com/gohugoio/hugo" "https://github.com/adam-p/markdown-here" "https://github.com/tuvtran/project-based-learning" "https://github.com/keras-team/keras" "https://github.com/Genymobile/scrcpy" "https://github.com/httpie/httpie" "https://github.com/chrislgarry/Apollo-11" "https://github.com/h5bp/html5-boilerplate" "https://github.com/josephmisiti/awesome-machine-learning" "https://github.com/ElemeFE/element" "https://github.com/redis/redis" "https://github.com/lodash/lodash" "https://github.com/nvm-sh/nvm" "https://github.com/h5bp/Front-end-Developer-Interview-Questions" "https://github.com/gin-gonic/gin" "https://github.com/Semantic-Org/Semantic-UI" "https://github.com/pytorch/pytorch" "https://github.com/resume/resume.github.com" "https://github.com/ansible/ansible" "https://github.com/protocolbuffers/protobuf" "https://github.com/rails/rails" "https://github.com/sveltejs/svelte")
+rand=$[$RANDOM % ${#allProjects[@]}]
+project=${allProjects[$rand]}
+"""
+
 
 def create_lib_file(package_name: str, install_command: str):
     """
@@ -495,8 +513,66 @@ def generate_mariadb_benchmark_test():
     """)
 
 
+def generate_packers():
+    """"""
+
+
+EXAMPLE_FILE_NAMES = ['XirXinNVTD', 'dtSU9URVgX', 'gT8wwdWudV', 'mZXOjbVYR0', 'urSsNeMZVQ', 'A5wlkU2tqW', 'muNR3nuPMC',
+                      'ZOsj93hUnf', 'PgPSCVzBQH', 'BpQD8Vnc5c', 'tGFpEvNrJd', '6fZNcA7WR5', 'y4D9lWwn0d', 'mTsQqK5dRM',
+                      'xBXMDud3yN', 'zHWYe9pTtx', 'kPh2hjbLvQ', 'Sb0ERLVHTq', '40ypHOCyRh', 'tdfefTGuYV', 'xbYIUlBEvw',
+                      'CJlTJVDdna', 'YUBAAiquDK', 'UOrCDFtfka', 'jJxANuGvu2', 'PfkJo1cwsM', 'RCaJogKaWg', 'MQ6Zzk4zMA',
+                      '6AsB1X68iv', '3BU9j4GmOM', 'vxH1y8CrqQ', '4vRlEYt2KP', 'yZXFbHM2pk', 'Mmkrte3m8u', 'Molkk7g8g4',
+                      'F0hd3N5gl0', '3aXPrlbUfh', 'ngt6QNTOPd', 'TSETUtNNw6', '5ekCfy1ycQ', 'QjVEeePbBl', 'Gb2Y4A0yKK',
+                      'pgPRNb2FUS', '4GYB4KVGcq', '9tvzu34t0r', 'ntB0xVyncF', 'ECaNXMz2xb', 'amTbXmbsmN', 'a0jHmQb8nZ',
+                      'uDg1LTwWoJ', 'vfPkCitP76', 'ogXNlDb1zy', '9fCqpkptw7', 'ZG0vWyaNZU', 'N3uglts8W3', 'XHpWW6E1aF',
+                      'QMqIdZCMvD', 're3Y6kY2Wu', '2sQbriPJvd', 'e4u3Xyd4P8']
+
+ARCHIVER_RELATIVE_PATH = "archivers/"
+ARCHIVED_FILENAME = "file.txt"
+ARCHIVED_FOLDER = "folder"
+
+
+def init_archiver_template():
+    start = """#!/bin/bash
+sleep 5m
+    """
+    result=start
+    for filname in EXAMPLE_FILE_NAMES:
+        result=result+"\nbase64 /dev/urandom | head -c 10000000 >"+ARCHIVED_FOLDER+"/"+filname+".txt"
+    return result+"\n"
+
+ARCHIVER_TEMPLATE = init_archiver_template()
+
+
+def gen_archiver_test(archive_type, archive_content):
+    result = ARCHIVER_TEMPLATE + "" + archive_content + " "
+    with open(ARCHIVER_RELATIVE_PATH + "/" + "archiver_" + archive_type + ".sh", 'w') as f:
+        f.write(result)
+
+
+def generate_all_archivers():
+    """"""
+    gen_archiver_test("bzip2", "bzip2 " + ARCHIVED_FOLDER+"/*")
+    gen_archiver_test("gzip", "gzip " + ARCHIVED_FOLDER+"/*")
+    gen_archiver_test("lrzip", "sudo apt install lrzip\nlrzip " + ARCHIVED_FOLDER+"/*")
+    gen_archiver_test("xz", "xz " + ARCHIVED_FOLDER+"/*")
+    gen_archiver_test("tar", "tar -xvf " + ARCHIVED_FOLDER+"/*")
+    gen_archiver_test("7zip", """
+sudo add-apt-repository universe
+sudo apt install p7zip-full p7zip-rar
+7z e """ + ARCHIVED_FOLDER+"/*")
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
-    generate_all_manual()
-    generate_all_snaped()
+    # generate_all_manual()
+    # generate_all_snaped()
     # generate_cassandra_benchmark_test()
     # generate_mariadb_benchmark_test()
+    generate_all_archivers()
