@@ -675,16 +675,23 @@ def generate_git_actions():
                                     ]
     remove_files = [GIT_REMOVE_ALL]
     switch_branches = [GIT_SWITCH_BRANCHES]
+
     reset_remote = [GIT_RESET_REMOTE]
+    update_repository = []
 
     #
-    all_options = itertools.product(create_folder,
-                                    setup_remote,
-                                    file_folder_creation_options,
-                                    remove_files,
-                                    switch_branches,
-                                    reset_remote)
-    for option in all_options:
+    all_options = list(itertools.product(create_folder,
+                                         setup_remote,
+                                         file_folder_creation_options,
+                                         remove_files,
+                                         switch_branches,
+                                         file_folder_creation_options,
+                                         remove_files,
+                                         reset_remote))
+    for i in range(len(all_options)):
+        option = all_options[i]
+        print(option)
+        gen_archiver_test("git_generated_" + str(i), ''.join(option))
         print(option)
 
 
