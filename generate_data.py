@@ -120,7 +120,6 @@ GIT_RESET_REMOTE = """
 # remote all files from remote
 git rm *
 git commit -m "removed all"
-git push origin master -f
 """
 
 GIT_CREATE_SINGLE_FILE = """
@@ -168,7 +167,7 @@ done
 git commit -m "added folders"
 
 """
-
+GIT_DO_NOTHING = ""
 GIT_REMOVE_ALL = """
 # remove files git
 git rm * -r
@@ -182,6 +181,14 @@ GIT_SWITCH_BRANCHES = """
 git checkout -b 3d_printer
 git add *
 git commit -m "changed branch"
+"""
+GIT_SWITCH_BRANCHES_BACK = """
+
+# changing back
+git checkout -b master
+git add *
+git commit -m "changed back"
+
 """
 
 
@@ -663,36 +670,39 @@ def gen_git_test(file_type, git_content):
 
 def generate_git_actions():
     create_folder = [GIT_CREATE_ENTER_FOLDER,
-                     GIT_SELECT_RAND_PROJECT]
-    setup_remote = [GIT_SELECT_RAND_PROJECT]
+                     GIT_SELECT_RAND_PROJECT]  # 2
+    setup_remote = [GIT_ADD_REMOTE_REPOSITORY]
+    file_folder_creation_options = [
+        # GIT_CREATE_SINGLE_FILE,
+        #                           GIT_CREATE_SINGLE_FILE + GIT_CREATE_FOLDER_SINGLE,
+        #                          GIT_CREATE_SINGLE_FILE + GIT_CREATE_FOLDER_MULTIPLE,
+        #                         GIT_CREATE_MULTIPLE_FILES,
+        #                        GIT_CREATE_MULTIPLE_FILES + GIT_CREATE_FOLDER_SINGLE,
+        GIT_CREATE_MULTIPLE_FILES + GIT_CREATE_FOLDER_MULTIPLE,
+    ]  # 6
+    remove_files = [GIT_REMOVE_ALL, GIT_DO_NOTHING]  # 2
+    switch_branches = [GIT_SWITCH_BRANCHES, GIT_DO_NOTHING]  # 2
+    switch_branches_back = [GIT_SWITCH_BRANCHES_BACK]  # 2
 
-    file_folder_creation_options = [GIT_CREATE_SINGLE_FILE,
-                                    GIT_CREATE_SINGLE_FILE + GIT_CREATE_FOLDER_SINGLE,
-                                    GIT_CREATE_SINGLE_FILE + GIT_CREATE_FOLDER_MULTIPLE,
-                                    GIT_CREATE_MULTIPLE_FILES,
-                                    GIT_CREATE_MULTIPLE_FILES + GIT_CREATE_FOLDER_SINGLE,
-                                    GIT_CREATE_MULTIPLE_FILES + GIT_CREATE_FOLDER_MULTIPLE,
-                                    ]
-    remove_files = [GIT_REMOVE_ALL]
-    switch_branches = [GIT_SWITCH_BRANCHES]
-
-    reset_remote = [GIT_RESET_REMOTE]
-    update_repository = []
-
+    reset_repository = [GIT_REMOVE_ALL + GIT_RESET_REMOTE]  # 1
+    # 2 *1*6*1*1*16
     #
     all_options = list(itertools.product(create_folder,
                                          setup_remote,
-                                         file_folder_creation_options,
-                                         remove_files,
+                                         file_folder_creation_options,  # 6
+                                         remove_files,  # 2
                                          switch_branches,
-                                         file_folder_creation_options,
-                                         remove_files,
-                                         reset_remote))
+                                         switch_branches_back,
+                                         file_folder_creation_options,  # 6
+                                         remove_files,  # 2
+                                         reset_repository  # 1
+                                         ))
+    print(len(all_options))
     for i in range(len(all_options)):
         option = all_options[i]
-        print(option)
-        gen_archiver_test("git_generated_" + str(i), ''.join(option))
-        print(option)
+        # print(option)
+        gen_git_test("git_generated_" + str(i), ''.join(option))
+    #  print(option)
 
 
 if __name__ == '__main__':
